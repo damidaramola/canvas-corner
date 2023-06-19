@@ -1,7 +1,7 @@
 ---
 name: CanvasCorner User story
 about: 'default user story template '
-title: USER STORY <TITLE>
+title: 'user story: <TITLE>'
 labels: ''
 assignees: ''
 
