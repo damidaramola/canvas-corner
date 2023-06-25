@@ -4,3 +4,10 @@
    box-shadow: 1px 0px 4px   var(--dark-grey);
 }
 
+.NavLink{
+   padding :5px;
+}
+
+.Active i {
+   color: var(--dark-grey);
+}
