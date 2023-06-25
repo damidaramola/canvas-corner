@@ -16,6 +16,15 @@
 
 }
 
+* {
+    box-sizing:boarder-box;
+}
+
+/* push content down below navbar */
+.Main{
+    padding-top:80px;
+ }
+ 
 /* style app icons */
 
 a:hover i {

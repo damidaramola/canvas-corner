@@ -4,7 +4,7 @@ import styles from "../styles/NavBar.module.css";
 
 const NavBar = () => {
   return (
-    <Navbar className={styles.NavBar}  expand="lg" fixed="top">
+    <Navbar className={styles.NavBar}  expand="md" fixed="top">
       <Container>
     <Navbar.Brand >CanvasCorner</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
