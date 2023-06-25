@@ -1,10 +1,12 @@
+/* color palette for website */
 :root{
     --white: #ffffff;
     --black: rgb(0, 0, 0);
     --light-blue:#caf0f8;
     --darker-blue:rgb(102, 212, 240);
     --light-grey:rgb(214, 214, 214);
-    --purple:rgb(243, 199, 243);
+    --dark-grey:rgb(66, 66, 66);
+    --purple:rgb(238, 162, 238);
   
   }
   
@@ -14,3 +16,22 @@
 
 }
 
+/* style app icons */
+
+a:hover i {
+    color:var(--dark-grey);
+    transition: color ease-in-out 0.3s;
+  }
+  
+  i {
+    color: var(--black);
+    font-size: 1rem;
+    padding: 7px;
+    vertical-align: middle;
+  }
+  
+  i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: var(--black);
+  }
