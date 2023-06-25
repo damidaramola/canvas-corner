@@ -19,12 +19,12 @@
 /* style app icons */
 
 a:hover i {
-    color:var(--dark-grey);
+    color:var(--black);
     transition: color ease-in-out 0.3s;
   }
   
   i {
-    color: var(--black);
+    color: var(--dark-grey);
     font-size: 1rem;
     padding: 7px;
     vertical-align: middle;
@@ -35,3 +35,18 @@ a:hover i {
     transition: color ease-in-out 0.3s;
     color: var(--black);
   }
+
+  /* app links */
+a {
+    color: var(--black);
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:hover i {
+    color: var(--black)
+  }
+  

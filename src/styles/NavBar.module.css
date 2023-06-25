@@ -1,5 +1,5 @@
 
 .NavBar{
    background-color:var(--light-blue);
-   box-shadow: 1px 1px 4px   var(--black);
+   box-shadow: 1px 0px 4px   var(--dark-grey);
 }
