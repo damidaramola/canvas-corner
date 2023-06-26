@@ -10,12 +10,11 @@ function App() {
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path='/' render={() => <h1>Home page</h1>}>
-          </Route>
-          <Route exact path='/signin' render={() => <h1> Sign in</h1>}>
-          </Route>
-          <Route exact path='/signup' render={() => <h1> Sign up</h1>}>
-          </Route>
+          <Route exact path='/' render={() => <h1>Home page</h1>}></Route>
+          <Route exact path='/signin' render={() => <h1> Sign in</h1>}></Route>
+          <Route exact path='/signup' render={() => <h1> Sign up</h1>}></Route>
+          <Route render={()=> <h1>Page not found!</h1>}/>
+
         </Switch>
 
 
