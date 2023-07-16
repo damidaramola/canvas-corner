@@ -1,0 +1,67 @@
+/* styling of all buttons */
+
+.Button {
+    font-size: 0.8rem;
+    align-self: center;
+    border-radius: 100px;
+    border-color: transparent;
+    padding: 4px 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 75px;
+  }
+  
+  .Button:hover {
+    opacity: 0.8;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  
+  .Button:hover:active {
+    background-color: var(--purple) !important;
+  }
+  
+  .Button:active {
+    background-color: var(--purple) !important;
+  }
+  
+  .Button:focus {
+    background-color: var(--purple);
+  }
+  
+  .Wide {
+    padding: 10px 50px;
+    width: 100%;
+  }
+  
+  .Purple,
+  .PurpleOutline:hover,
+  .Bright:hover {
+    background-color: var(--purple);
+    color: var(--white);
+  }
+  
+  .PurpleOutline,
+  .Purple:hover {
+    background-color: var(--white);
+    color: var(--purple);
+  }
+  
+  .Black,
+  .BlackOutline:hover {
+
+    background-color: #242a3d;
+    color:var(--white);
+  }
+  
+  .Black:hover,
+  .BlackOutline {
+ 
+    background-color:var(--white);
+    color: #242a3d;
+  }
+  
+  .Bright {
+    background-color:var(--darker-blue);
+    color : var(--purple);
+ }

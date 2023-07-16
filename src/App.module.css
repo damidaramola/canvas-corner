@@ -1,61 +1,107 @@
 /* color palette for website */
-:root{
-    --white: #ffffff;
-    --black: rgb(0, 0, 0);
-    --light-blue:#caf0f8;
-    --darker-blue:rgb(102, 212, 240);
-    --light-grey:rgb(214, 214, 214);
-    --dark-grey:rgb(66, 66, 66);
-    --purple:rgb(238, 162, 238);
-  
-  }
-  
-.App{
-    font-family: "Inter",sans-serif;
+:root {
+  --white: #ffffff;
+  --black: rgb(0, 0, 0);
+  --light-blue: #caf0f8;
+  --darker-blue: rgb(102, 212, 240);
+  --light-grey: rgb(214, 214, 214);
+  --dark-grey: rgb(66, 66, 66);
+  );
+--purple: rgb(231, 109, 231
+}
+
+.App {
+  font-family: "Inter", sans-serif;
 }
 
 * {
-    box-sizing:boarder-box;
+  box-sizing: boarder-box;
 }
 
 /* push content down below navbar */
-.Main{
-    padding-top:80px;
- }
- 
+.Main {
+  padding-top: 80px;
+}
+
+/* forms field */
+.Content {
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #dadadf;
+}
+
+.FillerImage {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.Image {
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+input[type="file"] {
+  display: none;
+}
+
 /* style app icons */
 a:hover {
   color: var(--dark-grey);
 }
-a:hover i {
-    color:var(--dark-grey);
-    transition: color ease-in-out 0.3s;
-  }
-  
-  i {
-    color: var(--black);
-    font-size: 1rem;
-    padding: 7px;
-    vertical-align: middle;
-  }
-  
-  i:hover {
-    cursor: pointer;
-    transition: color ease-in-out 0.3s;
-    color: var(--dark-grey);
-  }
 
-  /* app links */
+a:hover i {
+  color: var(--dark-grey);
+  transition: color ease-in-out 0.3s;
+}
+
+i {
+  color: var(--black);
+  font-size: 1rem;
+  padding: 7px;
+  vertical-align: middle;
+}
+
+i:hover {
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+  color: var(--dark-grey);
+}
+
+/* app links */
 a {
-    color: var(--black);
-    font-weight: bold;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
-  
-  a:hover i {
-    color: var(--dark-grey);
-  }
-  
+  color: var(--black);
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover i {
+  color: var(--dark-grey);
+}
+
+figure {
+  text-align: center;
+  display: inline-block;
+}
+
+/* scrollbar */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
