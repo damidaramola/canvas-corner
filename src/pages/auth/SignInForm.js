@@ -6,7 +6,7 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-function SignInForm () {
+function SignInForm() {
     const [signInData, setSignInData] = useState({
         username: "",
         password: "",
@@ -16,29 +16,34 @@ function SignInForm () {
     const [errors, setErrors] = useState({});
 
     const history = useHistory();
+
+    //handles submit button for successful signing in  and posts to API endpoint  
     const handleSubmit = async (event) => {
-      event.preventDefault();
-      try {
-        await axios.post("/dj-rest-auth/login/", signInData);
-        history.push("/");
-      } catch (err) {
-        setErrors(err.response?.data);
-      }
-    };
-    
-    const handleChange = (event) => {
-      setSignInData({
-        ...signInData,
-        [event.target.name]: event.target.value,
-      });
+        event.preventDefault();
+        try {
+            await axios.post("/dj-rest-auth/login/", signInData);
+            history.push("/");
+        } catch (err) {
+            setErrors(err.response?.data);
+        }
     };
 
-  return (
-    <Row className={styles.Row}>
-      <Col className="my-auto p-0 p-md-2" md={6}>
-        <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>sign in</h1>
-          <Form onSubmit={handleSubmit}>
+    // will handle changes when info is added to any input field
+    const handleChange = (event) => {
+        setSignInData({
+            ...signInData,
+            [event.target.name]: event.target.value,
+        });
+    };
+
+    return (
+        <Row className={styles.Row}>
+            <Col className="my-auto p-0 p-md-2" md={6}>
+                <Container className={`${appStyles.Content} p-4 `}>
+                    <h1 className={styles.Header}>sign in</h1>
+
+                    {/* form which will handle data input */}
+                    <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="username">
                             <Form.Label className="d-none">username</Form.Label>
                             <Form.Control
@@ -57,11 +62,7 @@ function SignInForm () {
                             </Alert>
                         ))}
                         <Form.Group controlId="password">
-                        {errors.password1?.map((message, idx) => (
-                            <Alert variant="warning" key={idx}>
-                                {message}
-                            </Alert>
-                        ))}
+
                             <Form.Label className="d-none">Password</Form.Label>
                             <Form.Control
                                 className={styles.Input}
@@ -72,8 +73,12 @@ function SignInForm () {
                                 onChange={handleChange}
                             />
                         </Form.Group>
+                        {errors.password1?.map((message, idx) => (
+                            <Alert variant="warning" key={idx}>
+                                {message}
+                            </Alert>
+                        ))}
 
-                       
                         <Button
                             className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
                             type="submit">
@@ -87,24 +92,24 @@ function SignInForm () {
                     </Form>
 
 
-        </Container>
-        <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link className={styles.Link} to="/signin">
-            Don't have an account? <span>Sign in now!</span>
-          </Link>
-        </Container>
-      </Col>
-      <Col
-        md={6}
-        className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
-      >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero.jpg"}
-        />
-      </Col>
-    </Row>
-  );
+                </Container>
+                <Container className={`mt-3 ${appStyles.Content}`}>
+                    <Link className={styles.Link} to="/signup">
+                        Don't have an account? <span>Sign up now!</span>
+                    </Link>
+                </Container>
+            </Col>
+            <Col
+                md={6}
+                className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
+            >
+                <Image
+                    className={`${appStyles.FillerImage}`}
+                    src={"#"}
+                />
+            </Col>
+        </Row>
+    );
 }
 
 export default SignInForm;
