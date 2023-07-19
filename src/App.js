@@ -9,6 +9,7 @@ import SignInForm from './pages/auth/SignInForm';
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
+// when createcontext function is called a new context object is created
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
 
@@ -32,7 +33,7 @@ function App() {
   return (
  
     <CurrentUserContext.Provider value={(currentUser)}>
-    <SetCurrentUserContext.Provider>
+    <SetCurrentUserContext.Provider value={(currentUser)}> 
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
