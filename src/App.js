@@ -6,17 +6,12 @@ import { Route, Switch } from 'react-router-dom';
 import "./api/axiosDefaults";
 import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
-import { createContext, useEffect, useState } from 'react';
-import axios from 'axios';
 
 
 function App() {
 
 
   return (
- 
-    <CurrentUserContext.Provider value={(currentUser)}>
-    <SetCurrentUserContext.Provider value={(currentUser)}> 
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
@@ -25,16 +20,10 @@ function App() {
           <Route exact path='/signin' render={() => <h1> <SignInForm /></h1>}></Route>
           <Route exact path='/signup' render={() => <SignUpForm />}></Route>
           <Route render={() => <h1>Page not found!</h1>} />
-
         </Switch>
-
-
       </Container>
-
     </div>
-    </SetCurrentUserContext.Provider>
-    </CurrentUserContext.Provider>
-   
+
   );
 }
 
