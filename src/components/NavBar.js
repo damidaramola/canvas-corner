@@ -10,11 +10,34 @@ const NavBar = () => {
 
   const addPostIcon = (
     <NavLink to='/posts/create' className={styles.NavLink}
-    activeClassName={styles.Active} >
-    <i className="fa-solid fa-plus-sqaure"></i>Add post
-  </NavLink>
+      activeClassName={styles.Active} >
+      <i className="fa-solid fa-plus"></i>Add post
+    </NavLink>
   )
-  const loggedInIcons = <>{currentUser?.username}</>;
+  const loggedInIcons = <>
+    <NavLink to='/feed' className={styles.NavLink}
+      activeClassName={styles.Active} >
+      <i className="fa-solid fa-stream"></i>Feed
+    </NavLink>
+
+    <NavLink to='/bookmark' className={styles.NavLink}
+      activeClassName={styles.Active} >
+      <i className="fa-solid fa-bookmark"></i>bookmarked
+    </NavLink>
+
+    <NavLink to='/' className={styles.NavLink}
+      onClick={() => { }}
+    >
+      <i className="fa-solid fa-sign-out-alt"></i>Sign out
+    </NavLink>
+
+    <NavLink
+      className={styles.NavLink}
+      to={`/profiles/${currentUser?.profile_id}`}
+    >
+      <img src={currentUser?.profile_image} />
+    </NavLink>
+  </>;
 
   // will display these icons when user is logged out
   const loggedOutIcons = <>
@@ -35,6 +58,7 @@ const NavBar = () => {
         <NavLink to='/'>
           <Navbar.Brand >CanvasCorner</Navbar.Brand>
         </NavLink>
+        {currentUser && addPostIcon}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
