@@ -9,19 +9,22 @@ import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 function SignInForm() {
     const setCurrentUser = useSetCurrentUser();
+
     const [signInData, setSignInData] = useState({
         username: "",
         password: "",
+   
     });
 
     const { username, password } = signInData;
+    
     const [errors, setErrors] = useState({});
 
     const history = useHistory();
-
-    //handles submit button for successful signing in  and posts to API endpoint  
+    // handles submit button for successful signing in  and posts to API endpoint  
     const handleSubmit = async (event) => {
         event.preventDefault();
+
         try {
             const { data } = await axios.post("/dj-rest-auth/login/", signInData);
             setCurrentUser(data.user)
@@ -48,7 +51,7 @@ function SignInForm() {
                     {/* form which will handle data input */}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="username">
-                            <Form.Label className="d-none">username</Form.Label>
+                            <Form.Label className="d-none">Username</Form.Label>
                             <Form.Control
                                 className={styles.Input}
                                 type="text"
