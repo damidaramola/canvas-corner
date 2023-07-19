@@ -9,9 +9,6 @@ import SignInForm from './pages/auth/SignInForm';
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
-// when createcontext function is called a new context object is created
-export const CurrentUserContext = createContext();
-export const SetCurrentUserContext = createContext();
 
 function App() {
 
