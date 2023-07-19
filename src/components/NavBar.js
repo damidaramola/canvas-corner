@@ -7,6 +7,13 @@ import { useCurrentUser } from '../contexts/CurrentUserContext';
 const NavBar = () => {
 
   const currentUser = useCurrentUser();
+
+  const addPostIcon = (
+    <NavLink to='/posts/create' className={styles.NavLink}
+    activeClassName={styles.Active} >
+    <i className="fa-solid fa-plus-sqaure"></i>Add post
+  </NavLink>
+  )
   const loggedInIcons = <>{currentUser?.username}</>;
 
   // will display these icons when user is logged out
