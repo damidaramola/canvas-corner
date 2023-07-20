@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Navbar, Container, Nav } from "react-bootstrap";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from 'react-router-dom'
@@ -11,8 +11,20 @@ const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
-  // #check if user has clicked inside/outside hamburger menue
+  // #check if user has clicked inside/outside hamburger menu
   const [expanded, setExpanded] = useState(false);
+  const ref = useRef(null)
+  useEffect(() => {
+    const handleClickOutside =(event) =>{
+      if(ref.current && !ref.current.contains(event.target)){
+        setExpanded(false);
+      }
+    }
+    document.addEventListener('mouseup', handleClickOutside)
+    return () => {
+      document.removeEventListener('mouseup', handleClickOutside)
+    }
+  },[ref])
 
   const handleSignOut = async () => {
     try {
@@ -74,7 +86,9 @@ const NavBar = () => {
           <Navbar.Brand >CanvasCorner</Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}
-        <Navbar.Toggle onClick={() => setExpanded(!expanded)}  aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+         ref={ref}
+         onClick={() => setExpanded(!expanded)}  aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <NavLink to='/' exact className={styles.NavLink}
