@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 const useClickOutsideToggle = () => {
      // #check if user has clicked inside/outside hamburger menu
   const [expanded, setExpanded] = useState(false);
