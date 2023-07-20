@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React, { useEffect, useRef, useState } from 'react'
 const useClickOutsideToggle = () => {
      // #check if user has clicked inside/outside hamburger menu
   const [expanded, setExpanded] = useState(false);
@@ -15,9 +14,7 @@ const useClickOutsideToggle = () => {
       document.removeEventListener('mouseup', handleClickOutside)
     }
   },[ref])
-  return (
-    <div>useClickOutsideToggle</div>
-  )
+  return { expanded, setExpanded, ref}
 }
 
 export default useClickOutsideToggle
