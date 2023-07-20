@@ -20,7 +20,7 @@ function PostCreateForm() {
 
   const [errors, setErrors] = useState({});
 
-
+// this text field holds cancel and create buttons
   const textFields = (
     <div className="text-center">
       {/* Add your form fields here */}
