@@ -10,22 +10,7 @@ const NavBar = () => {
 
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
-
-  // #check if user has clicked inside/outside hamburger menu
-  const [expanded, setExpanded] = useState(false);
-  const ref = useRef(null)
-  useEffect(() => {
-    const handleClickOutside =(event) =>{
-      if(ref.current && !ref.current.contains(event.target)){
-        setExpanded(false);
-      }
-    }
-    document.addEventListener('mouseup', handleClickOutside)
-    return () => {
-      document.removeEventListener('mouseup', handleClickOutside)
-    }
-  },[ref])
-
+  
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
