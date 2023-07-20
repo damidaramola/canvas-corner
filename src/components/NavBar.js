@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Navbar, Container, Nav } from "react-bootstrap";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from 'react-router-dom'
-import { useCurrentUser } from '../contexts/CurrentUserContext';
+import { useCurrentUser , useSetCurrentUser, } from '../contexts/CurrentUserContext';
 import Avatar from './Avatar';
+import axios from 'axios';
 
 const NavBar = () => {
 
   const currentUser = useCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
+
+  // #check if user has clicked inside/outside hamburger menue
+  const [expanded, setExpanded] = useState(false);
+
+  const handleSignOut = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const addPostIcon = (
     <NavLink to='/posts/create' className={styles.NavLink}
@@ -27,7 +41,7 @@ const NavBar = () => {
     </NavLink>
 
     <NavLink to='/' className={styles.NavLink}
-      onClick={() => { }}
+      onClick={handleSignOut}
     >
       <i className="fa-solid fa-sign-out-alt"></i>Sign out
     </NavLink>
@@ -54,13 +68,13 @@ const NavBar = () => {
 
   </>
   return (
-    <Navbar className={styles.NavBar} expand="md" fixed="top">
+    <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
       <Container>
         <NavLink to='/'>
           <Navbar.Brand >CanvasCorner</Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle onClick={() => setExpanded(!expanded)}  aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <NavLink to='/' exact className={styles.NavLink}
