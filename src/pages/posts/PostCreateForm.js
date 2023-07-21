@@ -30,13 +30,25 @@ function PostCreateForm() {
   });
 
   const { title, description, category, image } = postData;
-
+  
+  // handle's input changes in form
   const handleChange = (event) => {
     setPostData({
       ...postData,
       [event.target.name]: event.target.value,
     });
   };
+
+  //handles uploaded images 
+   const handleChangeImage = (event) =>{
+    if(event.target.files.length){
+      URL.revokeObjectURL(image);
+      setPostData({
+        ...postData,
+        image: URL.createObjectURL(event.target.files[0]),
+      });
+    }
+   }
 
   // this text field holds fields and cancel &create buttons
   const textFields = (
@@ -113,6 +125,7 @@ function PostCreateForm() {
               <Form.File
               id='image-upload' 
               accept='image/*'
+              onChange ={ handleChangeImage}
               />
 
             </Form.Group>
