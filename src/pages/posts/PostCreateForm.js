@@ -30,7 +30,7 @@ function PostCreateForm() {
   });
 
   const { title, description, category, image } = postData;
-  
+
   // handle's input changes in form
   const handleChange = (event) => {
     setPostData({
@@ -40,15 +40,15 @@ function PostCreateForm() {
   };
 
   //handles uploaded images 
-   const handleChangeImage = (event) =>{
-    if(event.target.files.length){
+  const handleChangeImage = (event) => {
+    if (event.target.files.length) {
       URL.revokeObjectURL(image);
       setPostData({
         ...postData,
         image: URL.createObjectURL(event.target.files[0]),
       });
     }
-   }
+  }
 
   // this text field holds fields and cancel &create buttons
   const textFields = (
@@ -111,21 +111,41 @@ function PostCreateForm() {
           <Container
             className={`${appStyles.Description} ${styles.Container} d-flex flex-column justify-content-center`}
           >
+            {/* Upload or update images  */}
             <Form.Group className="text-center">
+              {image ? (
+                <>
+                  <figure>
+                    <Image className={appStyles.Image}
+                      src={image}
+                      rounded
+                    />
+                  </figure>
 
-              <Form.Label
+                  <div>
+                    <Form.Label
+                      className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                      htmlFor='image-upload'
+                    >
+                      Change image
+                    </Form.Label>
+                  </div>
+
+                </>
+              ) : (<Form.Label
                 className="d-flex justify-content-center"
-                htmlFor="image-upload"
-              >
+                htmlFor="image-upload">
+
                 <Asset
                   src={Upload}
                   message="Click or tap to upload a picture"
                 />
-              </Form.Label>
+              </Form.Label>)}
+
               <Form.File
-              id='image-upload' 
-              accept='image/*'
-              onChange ={ handleChangeImage}
+                id='image-upload'
+                accept='image/*'
+                onChange={handleChangeImage}
               />
 
             </Form.Group>
