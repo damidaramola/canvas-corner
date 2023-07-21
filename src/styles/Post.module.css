@@ -1,0 +1,36 @@
+.Post {
+    background-color: var(--white);
+    border: 1px solid #dadadf;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .Post figure,
+  h5 {
+    margin: 0 0;
+  }
+  
+  .Heart {
+    color: #c02307;
+  }
+  
+  .Heart:hover {
+    color: #e4706c;
+  }
+  
+  .HeartOutline:hover {
+    color:  #c02307;
+  }
+
+  .Bookmark {
+    color: var(--black);
+  }
+  
+  .Bookmark:hover {
+    color: var(-dark-grey);
+  }
+  
+  .BookmarkOutline:hover {
+    color:  var(--black);
+  }

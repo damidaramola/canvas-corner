@@ -33,7 +33,7 @@ function PostPage() {
         <Row className="h-100">
             <Col className="py-2 p-0 p-lg-2" lg={8}>
                 <p>Post component</p>
-                <Container className={appStyles.Content}>
+                <Container className={appStyles.Description}>
                     Comments
                 </Container>
             </Col>
