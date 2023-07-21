@@ -28,17 +28,17 @@ function PostCreateForm() {
     category: '',
     image: '',
   });
-  
+
   const { title, description, category, image } = postData;
 
-  const handleChange = (event) =>{
+  const handleChange = (event) => {
     setPostData({
       ...postData,
       [event.target.name]: event.target.value,
     });
   };
 
-  // this text field holds cancel and create buttons
+  // this text field holds fields and cancel &create buttons
   const textFields = (
     <div className="text-center">
       <Form.Group>
@@ -46,6 +46,8 @@ function PostCreateForm() {
         <Form.Control
           type='text'
           name='title'
+          value={title}
+          onChange={handleChange}
         />
       </Form.Group>
       <Form.Group>
@@ -54,9 +56,12 @@ function PostCreateForm() {
           as='textarea'
           name='description'
           rows={6}
+          value={description}
+          onChange={handleChange}
         />
       </Form.Group>
       <Form.Group>
+        {/* create field for user to choose category level */}
         <Form.Label>Category</Form.Label>
         <Form.Control
           as="select"
@@ -102,8 +107,13 @@ function PostCreateForm() {
               >
                 <Asset
                   src={Upload}
-                  message="Click or tap to upload a picture" />
+                  message="Click or tap to upload a picture"
+                />
               </Form.Label>
+              <Form.File
+              id='image-upload' 
+              accept='image/*'
+              />
 
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
