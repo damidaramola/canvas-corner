@@ -24,7 +24,7 @@
 }
 
 /* forms field */
-.Content {
+.Description {
   background-color: var(--white);
   padding: 10px;
   border-radius: 2px;
@@ -45,6 +45,14 @@
 
 input[type="file"] {
   display: none;
+}
+
+.Input{
+  background: var(--white);
+  border: 1px solid var(--darker-blue);
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: var(--dark-grey);
 }
 
 /* style app icons */
