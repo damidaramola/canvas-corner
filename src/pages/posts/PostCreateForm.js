@@ -64,14 +64,14 @@ function PostCreateForm() {
     formData.append('image', imageInput.current.files[0])
     formData.append('category', category)
 
-  //handles form submission of the posts
-  //posts form data to posts endpoint of API
+    //handles form submission of the posts
+    //posts form data to posts endpoint of API
     try {
       const { data } = await axiosReq.post('/posts/', formData)
       history.push(`/posts/${data.id}`)
     } catch (err) {
       console.log(err)
-      if (errors.response?.status !== 401){
+      if (errors.response?.status !== 401) {
         setErrors(err.response?.data)
       }
     }
@@ -89,6 +89,12 @@ function PostCreateForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Form.Group>
         <Form.Label>Description</Form.Label>
         <Form.Control
@@ -99,6 +105,12 @@ function PostCreateForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.description?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Form.Group>
         {/* create field for user to choose category level */}
         <Form.Label>Category</Form.Label>
@@ -116,12 +128,18 @@ function PostCreateForm() {
           <option value="Professional">Professional</option>
         </Form.Control>
       </Form.Group>
+      {errors?.category?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
 
 
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        onClick={() => { }}
+        onClick={() => history.goBack()}
       >
         cancel
       </Button>
@@ -177,6 +195,12 @@ function PostCreateForm() {
               />
 
             </Form.Group>
+            {errors?.title?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
