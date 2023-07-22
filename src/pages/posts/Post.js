@@ -12,7 +12,6 @@ const Post = (props) => {
         owner,
         profile_id,
         profile_image,
-        created_at,
         updated_at,
         like_id,
         bookmark_id,
@@ -26,22 +25,21 @@ const Post = (props) => {
     } = props;
 
     const currentUser = useCurrentUser();
-    const is_owner = currentUser?.username === owner
+    const is_owner = currentUser?.username === owner;
 
 
-    return <Card className={styles.Post}>
+    return (
+    <Card className={styles.Post}>
         <Card.Body>
             <Media className='align-items-center justify-content-between'>
                 <Link to={`/profiles/${profile_id}`}>
-                    <Avatar src={profile_image} height={55} />
+                    <Avatar src={profile_image} 
+                    height={55} />
                     {owner}
                 </Link>
                 <div className='d-flex align-items-center'>
-                    <span>
-                        {updated_at}
+                    <span>{updated_at}</span>
                         {is_owner && postPage && '...'}
-
-                    </span>
                 </div>
             </Media>
         </Card.Body>
@@ -60,6 +58,7 @@ const Post = (props) => {
                 </Badge>
             </Card.Text>
 
+            {/* this div contains like comments and bookmark icons */}
             <div className={styles.PostBar}>
 
                 {/* prevents users from liking their own posts */}
@@ -70,16 +69,20 @@ const Post = (props) => {
                     >
                         <i className="far fa-heart" />
                     </OverlayTrigger>
+                    // user has liked post if like id exists
                 ) : like_id ? (
                     <span onClick={() => { }}>
                         <i className={`fas fa-heart ${styles.Heart}`} />
                     </span>
                 ) :
+                //  check if user is logged in 
                     currentUser ? (
                         <span onClick={() => { }}>
                             <i className={`far fa-heart ${styles.HeartOutline}`} />
                         </span>
                     ) :
+
+                    // display like icon for user who isn't logged in 
                         (
                             <OverlayTrigger
                                 placement="top"
@@ -94,7 +97,7 @@ const Post = (props) => {
                     <i className="far fa-comments" />
                 </Link>
                 {comments_count}
-                
+
                 {/* prevents users from bookmarking their own posts */}
                 {is_owner ? (
                     <OverlayTrigger
@@ -121,10 +124,10 @@ const Post = (props) => {
                                 <i className="fa-regular fa-bookmark" />
                             </OverlayTrigger>
                         )}
-
             </div>
         </Card.Body>
     </Card>
+    );
 }
 
 export default Post
