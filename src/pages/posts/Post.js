@@ -46,6 +46,57 @@ const Post = (props) => {
          }
     };
 
+     // allows users to un-like posts
+     const handleUnlike = async () => {
+        try{
+            await axiosRes.delete(`/likes/${like_id}`, {post:id})
+            setPosts((prevPosts) =>({
+                ...prevPosts,
+                results: prevPosts.results.map((post) =>{
+                    return post.id === id
+                    ?{...post, likes_count: post.likes_count -1, like_id: null}
+                    : post;
+                }),
+            }));
+        }catch(err){
+            console.log(err);
+         }
+    };
+  
+    // allows users to bookmark posts
+    const handleBookmark = async () => {
+        try{
+            const {data} = await axiosRes.post('/bookmarks/', {post:id})
+            setPosts((prevPosts) =>({
+                ...prevPosts,
+                results: prevPosts.results.map((post) =>{
+                    return post.id === id
+                    ?{...post, bookmark_id: data.id}
+                    : post;
+                }),
+            }));
+        }catch(err){
+            console.log(err);
+         }
+    };
+
+     // allows users to remove bookmark
+     const handleRemoveBookmark = async () => {
+        try{
+            await axiosRes.delete(`/bookmarks/${bookmark_id}`, {post:id})
+            setPosts((prevPosts) =>({
+                ...prevPosts,
+                results: prevPosts.results.map((post) =>{
+                    return post.id === id
+                    ?{...post, bookmark_id: null}
+                    : post;
+                }),
+            }));
+        }catch(err){
+            console.log(err);
+         }
+    };
+
 
     return (
     <Card className={styles.Post}>
@@ -90,13 +141,13 @@ const Post = (props) => {
                     </OverlayTrigger>
                     // user has liked post if like id exists
                 ) : like_id ? (
-                    <span onClick={() => { }}>
+                    <span onClick={handleUnlike}>
                         <i className={`fas fa-heart ${styles.Heart}`} />
                     </span>
                 ) :
                 //  check if user is logged in/exists 
                     currentUser ? (
-                        <span onClick={() => { }}>
+                        <span onClick={handleLike}>
                             <i className={`far fa-heart ${styles.HeartOutline}`} />
                         </span>
                     ) :
@@ -126,12 +177,12 @@ const Post = (props) => {
                         <i className="fa-regular fa-bookmark" />
                     </OverlayTrigger>
                 ) : bookmark_id ? (
-                    <span onClick={() => { }}>
-                        <i className={`fa-regular fa-bookmark ${styles.Bookmark}`} />
+                    <span onClick={handleRemoveBookmark}>
+                        <i className={`fa-solid fa-bookmark ${styles.Bookmark}`} />
                     </span>
                 ) :
                     currentUser ? (
-                        <span onClick={() => { }}>
+                        <span onClick={handleBookmark}>
                             <i className={`fa-regular fa-bookmark ${styles.BookmarkOutline}`} />
                         </span>
                     ) :
