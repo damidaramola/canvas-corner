@@ -124,15 +124,15 @@ function PostCreateForm() {
         >
           <option>Select artistry level</option>
           <option value="Novice">Novice</option>
-          <option value="Intermediate">intermediate</option>
+          <option value="Intermediate">Intermediate</option>
           <option value="Professional">Professional</option>
         </Form.Control>
       </Form.Group>
-      {errors?.category?.map((message, idx) => (
+      {/* {errors?.category?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
-      ))}
+      ))} */}
 
 
 
