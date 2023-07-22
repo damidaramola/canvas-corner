@@ -38,6 +38,20 @@ function DisplayPages({message, filter =''})
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={10}>
         <p>Popular profiles mobile</p>
+        <i className={`fas fa-search ${styles.SearchIcon}`} />
+        <Form
+          className={styles.SearchBar}
+          onSubmit={(event) => event.preventDefault()}
+        >
+          <Form.Control
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search posts"
+          />
+        </Form>
+        
         {hasLoaded ? (
           <>
             {posts.results.length ? (
@@ -45,13 +59,13 @@ function DisplayPages({message, filter =''})
                 <Post key={post.id} {...post} setPosts={setPosts} />
               ))
             ) : (
-              <Container className={appStyles.Content}>
+              <Container className={appStyles.Description}>
                 <Asset src={NoResults} message={message} />
               </Container>
             )}
           </>
         ) : (
-          <Container className={appStyles.Content}>
+          <Container className={appStyles.Description}>
             <Asset spinner />
           </Container>
         )}
