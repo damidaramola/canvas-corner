@@ -23,4 +23,4 @@ function PostsPage() {
   );
 }
 
-export default PostsPage;
+export default DisplayPages;
