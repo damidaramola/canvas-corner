@@ -122,7 +122,7 @@ function PostCreateForm() {
           onChange={handleChange}
           aria-label="category"
         >
-          <option>Select artistry level</option>
+          <option>Select Skill level</option>
           <option value="Novice">Novice</option>
           <option value="Intermediate">Intermediate</option>
           <option value="Professional">Professional</option>

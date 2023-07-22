@@ -32,5 +32,12 @@
   }
   
   .BookmarkOutline:hover {
-    color:  var(--black);
+    color:  rgb(81, 81, 230);
+  }
+
+  /* badge styling for skill level */
+  .PostBadge{
+    padding: 5px 8px;
+    margin: 0 4px;
+   font-size: inherit;
   }
