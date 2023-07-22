@@ -34,7 +34,7 @@ const NavBar = () => {
       <i className="fa-solid fa-stream"></i>Feed
     </NavLink>
 
-    <NavLink to='/bookmark' className={styles.NavLink}
+    <NavLink to='/bookmarks' className={styles.NavLink}
       activeClassName={styles.Active} >
       <i className="fa-solid fa-bookmark"></i>bookmarked
     </NavLink>
