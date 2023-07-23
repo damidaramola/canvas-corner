@@ -15,15 +15,16 @@ import { useLocation } from "react-router";
 function DisplayPages({message, filter =''}) 
 {
   const [posts,setPosts] = useState({results:[]});
-  const[hasLoaded,setHasLoaded] = useState(false)
+  const[hasLoaded,setHasLoaded] = useState(false);
   const {pathname} = useLocation();
+  const [query, setQuery] = useState("");
 
   //makes request to api based on filters
 
   useEffect(()=>{
     const fetchPosts = async ()=>{
       try{
-        const {data} = await axiosReq.get(`/posts/?${filter}`)
+        const {data} = await axiosReq.get(`/posts/?${filter}search=${query}`)
         setPosts(data)
         setHasLoaded(true)
       }catch(err){
@@ -32,7 +33,7 @@ function DisplayPages({message, filter =''})
     }
     setHasLoaded(false)
     fetchPosts();
-  },[filter,pathname])
+  },[filter,query,pathname])
 
   return (
     <Row className="h-100">
@@ -51,7 +52,7 @@ function DisplayPages({message, filter =''})
             placeholder="Search posts"
           />
         </Form>
-        
+
         {hasLoaded ? (
           <>
             {posts.results.length ? (
