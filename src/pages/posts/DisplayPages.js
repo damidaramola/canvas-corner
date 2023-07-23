@@ -12,6 +12,7 @@ import Post from "./Post";
 import NoResults from '../../assets/no-results.png'
 import { useLocation } from "react-router";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function DisplayPages({ message, filter = '' }) {
   const [posts, setPosts] = useState({ results: [] });
