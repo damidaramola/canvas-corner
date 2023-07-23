@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/MenuDropdown.module.css';
 import Dropdown from "react-bootstrap/Dropdown";
+import { render } from '@testing-library/react';
 
 
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
@@ -14,16 +15,17 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
     />
 ));
 
-export const MenuDropdown = () => {
+export const MenuDropdown = ({handleEdit}) => {
 
     return render(
         <Dropdown className='ml-auto' drop='left'>
             <Dropdown.Toggle as={ThreeDots} />
 
-            <Dropdown.Menu className='text-center'>
+            <Dropdown.Menu className='text-center'
+            popperConfig={{ strategy: "fixed" }}>
                 <Dropdown.Item
                     className={styles.DropdownItem}
-                    onClick={() => { }}
+                    onClick={handleEdit}
                     aria-label='edit'>
                 <i className='fas fa-edit' />
                 </Dropdown.Item>

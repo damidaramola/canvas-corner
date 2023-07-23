@@ -29,7 +29,12 @@ const Post = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
-    
+    const history = useHistory();
+
+    // holds id of post user wants to edit
+    const handleEdit = () => {
+        history.push(`/posts/${id}/edit`);
+      };
 
     // allows users to like posts
     const handleLike = async () => {
@@ -111,7 +116,7 @@ const Post = (props) => {
                 </Link>
                 <div className='d-flex align-items-center'>
                     <span>{updated_at}</span>
-                        {is_owner && postPage && <MenuDropdown/>}
+                        {is_owner && postPage && <MenuDropdown handleEdit={handleEdit}/>}
                 </div>
             </Media>
         </Card.Body>
