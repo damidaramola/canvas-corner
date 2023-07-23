@@ -31,8 +31,15 @@ function DisplayPages({message, filter =''})
         console.log(err)
       }
     }
-    setHasLoaded(false)
-    fetchPosts();
+    setHasLoaded(false);
+    const timer = setTimeout(() => {
+      fetchPosts();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  
   },[filter,query,pathname])
 
   return (
