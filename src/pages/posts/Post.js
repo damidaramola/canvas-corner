@@ -5,6 +5,7 @@ import { Badge, Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Avatar from '../../components/Avatar';
 import { axiosRes } from '../../api/axiosDefaults';
+import { MenuDropdown } from '../../components/MenuDropdown';
 
 
 const Post = (props) => {
@@ -28,6 +29,7 @@ const Post = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+    
 
     // allows users to like posts
     const handleLike = async () => {
@@ -49,7 +51,7 @@ const Post = (props) => {
      // allows users to un-like posts
      const handleUnlike = async () => {
         try{
-            await axiosRes.delete(`/likes/${like_id}`, {post:id})
+            await axiosRes.delete(`/likes/${like_id}`, {post:id});
             setPosts((prevPosts) =>({
                 ...prevPosts,
                 results: prevPosts.results.map((post) =>{
@@ -109,7 +111,7 @@ const Post = (props) => {
                 </Link>
                 <div className='d-flex align-items-center'>
                     <span>{updated_at}</span>
-                        {is_owner && postPage && '...'}
+                        {is_owner && postPage && <MenuDropdown/>}
                 </div>
             </Media>
         </Card.Body>

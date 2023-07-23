@@ -35,8 +35,7 @@ function PostPage() {
             <Col className="py-2 p-0 p-lg-2" lg={8}>
             <Post
                 {...post.results[0]} setPosts={setPost}
-                PostPage
-                />
+                PostPage />
                 <Container className={appStyles.Description}>
                     Comments
                 </Container>
