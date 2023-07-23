@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/MenuDropdown.module.css';
 import Dropdown from "react-bootstrap/Dropdown";
-import { render } from '@testing-library/react';
+// import { render } from '@testing-library/react';
 
 
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
@@ -15,9 +15,9 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
     />
 ));
 
-export const MenuDropdown = ({handleEdit}) => {
+export const MenuDropdown = ({handleEdit, handleDelete}) => {
 
-    return render(
+    return (
         <Dropdown className='ml-auto' drop='left'>
             <Dropdown.Toggle as={ThreeDots} />
 
@@ -31,12 +31,12 @@ export const MenuDropdown = ({handleEdit}) => {
                 </Dropdown.Item>
                 <Dropdown.Item
                     className={styles.DropdownItem}
-                    onClick={() => { }}
+                    onClick={ handleDelete}
                     aria-label='delete'>
                 <i className='fas fa-trash-alt' />
                 </Dropdown.Item>
             </Dropdown.Menu>
-        </Dropdown>,
+        </Dropdown>
     )
 };
 
