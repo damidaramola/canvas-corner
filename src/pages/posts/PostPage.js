@@ -62,7 +62,7 @@ function PostPage() {
                         comments.results.map(comment => (
                             // <Comment key={comment.id} {...comment} />
                             <p key={comment.id}>
-                                {comment.owner}: {comment.description}
+                                {comment.owner}: {comment.content}
                             </p>
                         ))
                     ) : currentUser ? (

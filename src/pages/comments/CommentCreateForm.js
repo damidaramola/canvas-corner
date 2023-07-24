@@ -37,6 +37,7 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
+    alert("server is down! please check back later")
       console.log(err);
     }
   };
