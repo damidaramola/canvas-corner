@@ -6,6 +6,7 @@ import Avatar from '../../components/Avatar';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { MenuDropdown } from '../../components/MenuDropdown';
 import { axiosRes } from '../../api/axiosDefaults';
+import CommentEditForm from "./CommentEditForm";
 
 const Comment = (props) => {
     const { profile_id,
