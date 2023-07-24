@@ -84,7 +84,7 @@ function PostEditForm() {
         //handles form submission of the posts
         //posts form data to posts endpoint of API
         try {
-            await axiosReq.put(`/posts/${id}`, formData)
+            await axiosReq.put(`/posts/${id}/`, formData)
             history.push(`/posts/${id}`)
         } catch (err) {
             console.log(err)
