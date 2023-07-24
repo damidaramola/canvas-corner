@@ -16,10 +16,10 @@ import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function PostCreateForm() {
+function PostEditForm() {
 
   // logic which stores and updates state
   const [errors, setErrors] = useState({});
@@ -33,9 +33,10 @@ function PostCreateForm() {
 
 
   const { title, description, category, image } = postData;
-
+  
   const imageInput = useRef(null)
   const history = useHistory()
+  const {id} = useParams();
 
   // handle's input changes in form
   const handleChange = (event) => {
@@ -212,4 +213,4 @@ function PostCreateForm() {
   );
 }
 
-export default PostCreateForm;
+export default PostEditForm;
