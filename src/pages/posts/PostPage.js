@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+// import Comment from "../comments/Comment";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -17,16 +18,20 @@ function PostPage() {
     const currentUser = useCurrentUser();
     const profile_image = currentUser?.profile_image;
     const [comments, setComments] = useState({ results: [] });
-    //handles request for post and  will run code
+
+    //handles api request for post and  will run code
     //when post id changes in the url
     useEffect(() => {
         const handleMount = async () => {
             try {
-                const [{ data: post }] = await Promise.all([
-                    axiosReq.get(`/posts/${id}`)
+                // api request for posts to be shown
+                const [{ data: post }, { data: comments }] = await Promise.all([
+                    axiosReq.get(`/posts/${id}`),
+                    // will fetch post comments
+                    axiosReq.get(`/comments/?post=${id}`)
                 ]);
                 setPost({ results: [post] });
-                console.log(post);
+                setComments(comments)
             } catch (err) {
                 console.log(err);
             }
@@ -40,7 +45,7 @@ function PostPage() {
                 <Post
                     {...post.results[0]} setPosts={setPost}
                     postPage />
-                    {/* add comment form */}
+                {/* add comment form */}
                 <Container className={appStyles.Description}>
                     {currentUser ? (
                         <CommentCreateForm
@@ -53,6 +58,18 @@ function PostPage() {
                     ) : comments.results.length ? (
                         "Comments"
                     ) : null}
+                    {comments.results.length ? (
+                        comments.results.map(comment => (
+                            // <Comment key={comment.id} {...comment} />
+                            <p key={comment.id}>
+                                {comment.owner}: {comment.description}
+                            </p>
+                        ))
+                    ) : currentUser ? (
+                        <span>No comments yet, be the first to comment!</span>
+                    ) : (
+                        <span>No comments... yet</span>
+                    )}
 
                 </Container>
             </Col>
