@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-// import Comment from "../comments/Comment";
+import Comment from "../comments/Comment";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -60,10 +60,7 @@ function PostPage() {
                     ) : null}
                     {comments.results.length ? (
                         comments.results.map(comment => (
-                            // <Comment key={comment.id} {...comment} />
-                            <p key={comment.id}>
-                                {comment.owner}: {comment.content}
-                            </p>
+                            <Comment key={comment.id} {...comment} />
                         ))
                     ) : currentUser ? (
                         <span>No comments yet, be the first to comment!</span>
