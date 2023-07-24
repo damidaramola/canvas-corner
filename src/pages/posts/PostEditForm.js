@@ -10,12 +10,9 @@ import {
     Row,
 } from "react-bootstrap";
 
-import Upload from "../../assets/upload.png";
-
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import Asset from "../../components/Asset";
 import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -100,6 +97,7 @@ function PostEditForm() {
     // this text field holds fields and cancel &create buttons
     const textFields = (
         <div className="text-center">
+            <h4> Edit post</h4>
             <Form.Group>
                 <Form.Label>Title</Form.Label>
                 <Form.Control
@@ -164,7 +162,7 @@ function PostEditForm() {
                 cancel
             </Button>
             <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-                create
+                save
             </Button>
         </div>
     );
@@ -178,34 +176,21 @@ function PostEditForm() {
                     >
                         {/* Upload or update images  */}
                         <Form.Group className="text-center">
-                            {image ? (
-                                <>
-                                    <figure>
-                                        <Image className={appStyles.Image}
-                                            src={image}
-                                            rounded
-                                        />
-                                    </figure>
-
-                                    <div>
-                                        <Form.Label
-                                            className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                                            htmlFor='image-upload'
-                                        >
-                                            Change image
-                                        </Form.Label>
-                                    </div>
-
-                                </>
-                            ) : (<Form.Label
-                                className="d-flex justify-content-center"
-                                htmlFor="image-upload">
-
-                                <Asset
-                                    src={Upload}
-                                    message="Click or tap to upload a picture"
+                            <figure>
+                                <Image className={appStyles.Image}
+                                    src={image}
+                                    rounded
                                 />
-                            </Form.Label>)}
+                            </figure>
+
+                            <div>
+                                <Form.Label
+                                    className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                                    htmlFor='image-upload'
+                                >
+                                    Change image
+                                </Form.Label>
+                            </div>
 
                             <Form.File
                                 id='image-upload'
