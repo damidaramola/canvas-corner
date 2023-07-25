@@ -73,7 +73,7 @@ function ProfilePage() {
             </Col>
           </Row>
         </Col>
-        {/* allows you to follow/unfollow another user  */}
+        {/* allows you to follow/unfollow another user when logged in  */}
         <Col lg={3} className="text-lg-right">
           {currentUser &&
             !is_owner &&
