@@ -70,9 +70,11 @@ function PostCreateForm() {
       const { data } = await axiosReq.post('/posts/', formData)
       history.push(`/posts/${data.id}`)
     } catch (err) {
+      // alert('image size larger than 2mb')
       console.log(err)
       if (errors.response?.status !== 401) {
         setErrors(err.response?.data)
+        
       }
     }
   }
@@ -111,7 +113,7 @@ function PostCreateForm() {
         </Alert>
       ))}
 
-      <Form.Group>
+      <Form.Group >
         {/* create field for user to choose category level */}
         <Form.Label>Category</Form.Label>
         <Form.Control
