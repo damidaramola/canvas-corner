@@ -9,17 +9,35 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
-import PopularProfiles from "./PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function ProfilePage() {
+ 
   const [hasLoaded, setHasLoaded] = useState(false);
+  //gets current user object 
   const currentUser = useCurrentUser();
+  const { id } = useParams();
+  const setProfileData = useSetProfileData();
 
   useEffect(() => {
-      setHasLoaded(true);
-  }, [])
+    const fetchData = async () => {
+        try {
+            // api request to the profiles endpoint
+            const [{ data: pageProfile }] = await Promise.all([
+                axiosReq.get(`/profiles/${id}`)
+            ]);
+            setProfileData(prevState => ({
+                ...prevState,
+                pageProfile: {results :[pageProfile]}
+                
+            }))
+            setHasLoaded(true);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+  fetchData()
+  }, [id, setProfileData])
 
   const mainProfile = (
     <>
@@ -50,7 +68,7 @@ function ProfilePage() {
   return (
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <PopularProfiles mobile />
+     
         <Container className={appStyles.Description}>
           {hasLoaded ? (
             <>
@@ -62,9 +80,7 @@ function ProfilePage() {
           )}
         </Container>
       </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        <PopularProfiles />
-      </Col>
+    
     </Row>
   );
 }

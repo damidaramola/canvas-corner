@@ -11,6 +11,7 @@ import PostEditForm from './pages/posts/PostEditForm';
 import PostPage from './pages/posts/PostPage';
 import DisplayPages from './pages/posts/DisplayPages';
 import { useCurrentUser } from './contexts/CurrentUserContext';
+import ProfilePage from './pages/profiles/ProfilePage';
 
 
 function App() {
