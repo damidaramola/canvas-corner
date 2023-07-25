@@ -10,8 +10,10 @@ import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosReq } from "../../api/axiosDefaults";
+import { useProfileData, useSetProfileData } from "../../contexts/ProfileDataContext";
 
 function ProfilePage() {
  
