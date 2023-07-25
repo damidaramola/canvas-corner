@@ -22,6 +22,7 @@ function ProfilePage() {
   const setProfileData = useSetProfileData();
   const {pageProfile} = useProfileData();
   const [profile] = pageProfile.results;
+  const is_owner = currentUser?.username === profile?.owner;
 
 //   Makes an API request to fetch user profile and their posts
 //   Updates the profile page data
@@ -72,10 +73,27 @@ function ProfilePage() {
             </Col>
           </Row>
         </Col>
+        {/* allows you to follow/unfollow another user  */}
         <Col lg={3} className="text-lg-right">
-        <p>Follow button</p>
+          {currentUser &&
+            !is_owner &&
+            (profile?.following_id ? (
+              <Button
+                className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
+                onClick={() => {}}
+              >
+                unfollow
+              </Button>
+            ) : (
+              <Button
+                className={`${btnStyles.Button} ${btnStyles.Black}`}
+                onClick={() => {}}
+              >
+                follow
+              </Button>
+            ))}
         </Col>
-        <Col className="p-3">Profile content</Col>
+        {profile?.content && <Col className="p-3">{profile.content}</Col>}
       </Row>
     </>
   );
