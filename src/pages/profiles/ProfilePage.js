@@ -10,6 +10,7 @@ import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { Image } from "react-bootstrap";
 
 function ProfilePage() {
  
@@ -18,7 +19,11 @@ function ProfilePage() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
   const setProfileData = useSetProfileData();
+  const {pageProfile} = useProfileData();
+  const [profile] = pageProfile.results;
 
+//   Makes an API request to fetch user profile and their posts
+//   Updates the profile page data
   useEffect(() => {
     const fetchData = async () => {
         try {
@@ -43,7 +48,10 @@ function ProfilePage() {
     <>
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
-          <p>Image</p>
+          <Image
+          className={styles.ProfileImage}
+          roundedCircle src={profile.image}
+          />
         </Col>
         <Col lg={6}>
           <h3 className="m-2">Profile username</h3>
