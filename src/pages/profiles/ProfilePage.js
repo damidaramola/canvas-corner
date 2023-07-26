@@ -97,7 +97,7 @@ function ProfilePage() {
             ) : (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.Black}`}
-                onClick={() => {}}
+                onClick={handleFollow(profile)}
               >
                 follow
               </Button>
@@ -111,7 +111,7 @@ function ProfilePage() {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center">Profile owner's posts</p>
+      <p className="text-center">{profile?.owner}'s posts</p>
       <hr />
       {/* checks if the profile posts results array is not empty */}
       {profilePosts.results.length ? (
