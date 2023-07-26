@@ -48,7 +48,6 @@ function DisplayPages({ message, filter = '' }) {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={10}>
-        <p>Popular profiles mobile</p>
         {/* make queries in searchbar */}
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
