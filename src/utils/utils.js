@@ -60,11 +60,14 @@ export const unfollowHelper = (profile, clickedProfile) => {
       profile;
 };
 
+// extracts expiry date from access token and save
+// to users browser in local storage 
 export const setTokenTimestamp = (data) =>{
   const refreshTokenTimestamp = jwtDecode(data?.refresh_token).exp
   localStorage.setItem('refreshTokenTimestamp', refreshTokenTimestamp)
 }
 
+// checks if expiry date exists in users local storage 
 //will check weather to refresh the users token or not
 export const shouldRefreshToken = () =>{
   return !!localStorage.getItem('refreshTokenTimestamp')
