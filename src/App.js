@@ -15,6 +15,7 @@ import ProfilePage from './pages/profiles/ProfilePage';
 import UsernameForm from './pages/profiles/UsernameForm';
 import UserPasswordForm from './pages/profiles/UserPasswordForm';
 import ProfileEditForm from './pages/profiles/ProfileEditForm';
+import PageNotFound from './components/PageNotFound';
 
 
 function App() {
@@ -61,9 +62,8 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          <Route render={() => <h1>Page not found!</h1>} />
-          
-          <></>
+          <Route render={() => <PageNotFound />} />
+    
         </Switch>
       </Container>
     </div>

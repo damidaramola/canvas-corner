@@ -1,6 +1,6 @@
 import React from "react";
 import NoResults from "../assets/no-results.png";
-import styles from "../styles/NotFound.module.css";
+import styles from "../styles/PageNotFound.module.css";
 import Asset from "./Asset";
 
 //404 error page
