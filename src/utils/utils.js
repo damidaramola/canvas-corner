@@ -38,8 +38,8 @@ export const followHelper = (profile, clickedProfile, following_id) => {
 };
 
 
-//Decrease the number of followers of profile clicked by 1
-//Decrease the number of following users by 1
+//Decreases the number of followers of profile clicked by - 1
+//Decreases the number of following users by - 1
 
 export const unfollowHelper = (profile, clickedProfile) => {
   return profile.id === clickedProfile.id
