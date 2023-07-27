@@ -28,7 +28,7 @@ const LandingPage = () => {
                             <img
                                 src={landingPageImage}
                                 className={styles.LandingPageImage}
-                                alt="Person photographing a plate with food"
+                                alt="Person painting"
                             />
                             <Card.Body>
                                 <Link to="/signup">
@@ -38,7 +38,7 @@ const LandingPage = () => {
                                         Join now!
                                     </Button>
                                 </Link>
-                                <Link to="/login">
+                                <Link to="/signin">
                                     <Button className={`${btnStyles.Button} mb-3`}>
                                         I’m an existing member, log me in!
                                     </Button>

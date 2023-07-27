@@ -16,6 +16,7 @@ import UsernameForm from './pages/profiles/UsernameForm';
 import UserPasswordForm from './pages/profiles/UserPasswordForm';
 import ProfileEditForm from './pages/profiles/ProfileEditForm';
 import PageNotFound from './components/PageNotFound';
+import LandingPage from './pages/landing/LandingPage';
 
 
 function App() {
@@ -26,7 +27,58 @@ function App() {
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
+      {!currentUser ? (
         <Switch>
+          <Route exact path="/" render={() => <LandingPage />} />
+          <Route exact path='/signup' render={() => <SignUpForm />} />
+          <Route exact path='/signin' render={() => <h1> <SignInForm /></h1>} />
+          <Route render={() => <LandingPage />} />
+        </Switch>
+      ): (
+        <Switch>
+          <Route
+            exact path="/"
+            render={() => (
+              <DisplayPages
+                message="No results found" />
+            )}
+          />
+          {/* Feed route */}
+          <Route
+            exact path="/feed"
+            render={() => (
+              <DisplayPages
+                message="No results found. Adjust the search keyword or follow a user."
+                filter={`owner__followed__owner__profile=${profile_id}&`}
+              />
+            )}
+          />
+          {/* bookmarks post route */}
+          <Route
+            exact path="/bookmarks"
+            render={() => (
+              <DisplayPages
+                message="No results found. Adjust the search keyword or bookmark a post."
+                filter={`post_bookmarks__owner__profile=${profile_id}&ordering=-post_bookmarks__bookmarked_at&`}
+              />
+            )}
+          />
+
+          <Route exact path="/posts/create" render={() => <PostCreateForm />} />
+          <Route exact path="/posts/:id" render={() => <PostPage />} />
+          <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />}/>
+          <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />
+          <Route exact path="/profiles/:id/edit/username"render={() => <UsernameForm />}/>
+          <Route render={() => <PageNotFound />} />
+          <Route path="*">
+            <PageNotFound />
+          </Route>
+        </Switch>
+      )}
+
+        {/* <Switch>
           <Route exact path='/' render={() => (<DisplayPages
             message='No results found' 
             />)} />
@@ -64,7 +116,7 @@ function App() {
           />
           <Route render={() => <PageNotFound />} />
     
-        </Switch>
+        </Switch> */}
       </Container>
     </div>
 
