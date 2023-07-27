@@ -1,5 +1,5 @@
-import React, {useState } from "react";
-import axios from "axios"
+import React, { useState } from "react";
+import axios from "axios";
 import { Alert, Form, Button, Image, Col, Row, Container } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/SignInUpForm.module.css";
@@ -11,16 +11,16 @@ import { setTokenTimestamp } from "../../utils/utils";
 
 function SignInForm() {
     const setCurrentUser = useSetCurrentUser();
-    useRedirect('loggedIn')
+    useRedirect('loggedIn');
 
     const [signInData, setSignInData] = useState({
         username: "",
         password: "",
-   
+
     });
 
     const { username, password } = signInData;
-    
+
     const [errors, setErrors] = useState({});
 
     const history = useHistory();
@@ -32,8 +32,8 @@ function SignInForm() {
 
         try {
             const { data } = await axios.post("/dj-rest-auth/login/", signInData);
-            setCurrentUser(data.user)
-            setTokenTimestamp(data)
+            setCurrentUser(data.user);
+            setTokenTimestamp(data);
             history.goBack();
 
         } catch (err) {

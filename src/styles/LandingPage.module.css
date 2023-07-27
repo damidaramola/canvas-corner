@@ -1,0 +1,37 @@
+
+  .ButtonMargin {
+    margin-right: 15px;
+  }
+  
+  .LandingPageImage {
+    width: 370px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .footer p {
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+  .footer {
+    display: flow-root;
+    margin-top: 20px;
+  }
+  
+ 
+  
+  /* Remove right margin on the buttons on screens which are smaller */
+  @media all and (max-width: 500px) {
+    .ButtonMargin {
+      margin-right: 0;
+    }
+  }
+  
+  /* Reduce size of landing page on smaller screens */
+  @media all and (max-width: 440px) {
+    .LandingPageImage {
+      width: 80%;
+      height: 80%;
+    }
+  }
+  
