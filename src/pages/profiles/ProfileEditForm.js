@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+import Alerts from '../../components/Alerts';
 
 import { axiosReq } from "../../api/axiosDefaults";
 import {
@@ -33,6 +34,8 @@ const ProfileEditForm = () => {
   const { name, description, image } = profileData;
 
   const [errors, setErrors] = useState({});
+
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -76,7 +79,10 @@ const ProfileEditForm = () => {
         ...currentUser,
         profile_image: data.image,
       }));
-      history.goBack();
+      setShowAlert(true);
+      setTimeout(function () {
+        history.goBack();
+      }, 2000);
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);
@@ -86,6 +92,12 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
+      {showAlert && (
+          <Alerts
+            variant="info"
+            message="Profile successfully updated. Taking you back to profile page..."
+          />
+        )}
         <Form.Label>Bio</Form.Label>
         <Form.Control
           as="textarea"
