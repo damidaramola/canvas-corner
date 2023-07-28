@@ -7,6 +7,7 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { MenuDropdown } from '../../components/MenuDropdown';
 import { axiosRes } from '../../api/axiosDefaults';
 import CommentEditForm from "./CommentEditForm";
+import Alerts from '../../components/Alerts';
 
 const Comment = (props) => {
     const { profile_id,
@@ -17,11 +18,17 @@ const Comment = (props) => {
         id,
         setPost,
         setComments, } = props;
+
     const [showEditForm, setShowEditForm] = useState(false);
+    const [isDeleted, setIsDeleted] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
 
     const handleDelete = async () => {
+      setIsDeleted(true);
+
+      setTimeout(async () => {
         try {
             // makes a delete request to api endpoint
             await axiosRes.delete(`/comments/${id}/`);
@@ -38,13 +45,21 @@ const Comment = (props) => {
                 ...prevComments,
                 results: prevComments.results.filter((comment) => comment.id !== id),
             }));
-        } catch (err) { }
+        } catch (err){ 
+          
+        }
+      }, 2500);
     };
 
     // adds a ternary to show the comment edit form component if a user selects the edit option
-    return (
-        <>
-          <hr />
+  
+    return isDeleted ? (
+      <Alerts variant="info" message="Comment has been deleted" />
+    ) : (
+      <div>
+        {showAlert && (
+          <Alerts variant="info" message="Comment has been updated" />
+        )}  
           <Media>
             <Link to={`/profiles/${profile_id}`}>
               <Avatar src={profile_image} />
@@ -52,6 +67,12 @@ const Comment = (props) => {
             <Media.Body className="align-self-center ml-2">
               <span className={styles.Owner}>{owner}</span>
               <span className={styles.Date}>{updated_at}</span>
+              {is_owner && !showEditForm && (
+              <MenuDropdown
+                handleEdit={() => setShowEditForm(true)}
+                handleDelete={handleDelete}
+              />
+            )}
               {showEditForm ? (
                 <CommentEditForm
                 id={id}
@@ -60,21 +81,17 @@ const Comment = (props) => {
                 profileImage={profile_image}
                 setComments={setComments}
                 setShowEditForm={setShowEditForm}
+                setShowAlert={setShowAlert}
               />
           
               ) : (
                 <p>{content}</p>
               )}
             </Media.Body>
-            {is_owner && !showEditForm && (
-              <MenuDropdown
-                handleEdit={() => setShowEditForm(true)}
-                handleDelete={handleDelete}
-              />
-            )}
+           
           </Media>
-        </>
-      );
+          </div>
+    );
 };
 
 export default Comment;

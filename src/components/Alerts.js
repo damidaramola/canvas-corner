@@ -3,12 +3,12 @@ import css from "classnames";
 import React from "react";
 import { useState } from "react";
 
-export default function FeedbackMsg({ type, message }) {
+export default function Alerts({ type, message }) {
   const [isShown, setIsShown] = useState(true);
 
-  /*
-    Handles closing of the alert message
-  */
+  
+//    This Handles and closes the alert message
+  
   const handleClose = (e) => {
     e.preventDefault();
     setIsShown(false);
