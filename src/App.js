@@ -78,45 +78,6 @@ function App() {
         </Switch>
       )}
 
-        {/* <Switch>
-          <Route exact path='/' render={() => (<DisplayPages
-            message='No results found' 
-            />)} />
-
-          <Route exact path='/feed' render={() => (<DisplayPages
-            message='No results found. Adjust the search keyword or follow a user' 
-            filter={`owner__followed__owner__profile=${profile_id}&`}
-            />)} />
-
-          <Route exact path='/bookmarks' render={() => (<DisplayPages
-            message='No results found. Adjust the search keyword or bookmark a post' 
-            filter={`post_bookmarks__owner__profile=${profile_id}&ordering=-post_bookmarks__bookmarked_at&`}
-            />)} 
-          />
-          <Route exact path='/signin' render={() => <h1> <SignInForm /></h1>} />
-          <Route exact path='/signup' render={() => <SignUpForm />} />
-          <Route exact path='/posts/create' render={() => <PostCreateForm />} />
-          <Route exact path='/posts/:id/edit' render={() => <PostEditForm />} />
-          <Route exact path='/posts/:id' render={() => <PostPage />} />
-          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-          <Route
-            exact
-            path="/profiles/:id/edit/username"
-            render={() => <UsernameForm />}
-          />
-          <Route
-            exact
-            path="/profiles/:id/edit/password"
-            render={() => <UserPasswordForm />}
-          />
-          <Route
-            exact
-            path="/profiles/:id/edit"
-            render={() => <ProfileEditForm />}
-          />
-          <Route render={() => <PageNotFound />} />
-    
-        </Switch> */}
       </Container>
     </div>
 

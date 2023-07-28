@@ -8,6 +8,7 @@ import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
+import signInPageImage from "../../assets/sign-up-image.jpg";
 
 function SignInForm() {
     const setCurrentUser = useSetCurrentUser();
@@ -94,7 +95,9 @@ function SignInForm() {
 
                         <Button
                             className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
-                            type="submit">
+                            type="submit"
+                            onMouseDown={(e) => e.preventDefault()}
+                            >
                             Sign In
                         </Button>
                         {errors.non_field_errors?.map((message, idx) => (
@@ -118,7 +121,7 @@ function SignInForm() {
             >
                 <Image
                     className={`${appStyles.FillerImage}`}
-                    src={"#"}
+                    src={signInPageImage}
                 />
             </Col>
         </Row>
