@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import Alerts from '../../components/Alerts';
 
 import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -26,6 +27,8 @@ const UserPasswordForm = () => {
   const { new_password1, new_password2 } = userData;
 
   const [errors, setErrors] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
+
 
   const handleChange = (event) => {
     setUserData({
@@ -45,7 +48,10 @@ const UserPasswordForm = () => {
     event.preventDefault();
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
-      history.goBack();
+      setShowAlert(true);
+      setTimeout(function () {
+        history.goBack();
+      }, 2000);
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);
@@ -55,6 +61,12 @@ const UserPasswordForm = () => {
   return (
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
+      {showAlert && (
+          <Alerts
+            variant="info"
+            message="Profile successfully updated. Taking you back to profile page..."
+          />
+        )}
         <Container className={appStyles.Description}>
           <Form onSubmit={handleSubmit}>
             <Form.Group>

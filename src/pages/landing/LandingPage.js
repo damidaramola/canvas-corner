@@ -14,9 +14,9 @@ const LandingPage = () => {
                         <Card>
                             <Card.Body>
                                 <Card.Title>
-                                    <h1 className="mb-4">CanvasCorner - Get started</h1>
+                                    <h1 className="mb-6 font-weight-bold">CanvasCorner - Get started</h1>
                                 </Card.Title>
-                                <Card.Text className="font-weight-bold">
+                                <Card.Text >
                                     CanvasCorner is a photo-sharing content platform for artists who love to paint. 
                                     You can share your artwork with many passionate artists and gain inspiration for your 
                                     future master pieces!

@@ -10,7 +10,7 @@ import Alerts from '../../components/Alerts';
 
 const Post = (props) => {
     const {
-        id,
+        id, 
         owner,
         profile_id,
         profile_image,

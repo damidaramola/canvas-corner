@@ -22,6 +22,7 @@ export const ProfileDataProvider = ({ children }) => {
     // the user had followed (clicked)
 
     const handleFollow = async (clickedProfile) => {
+        console.log(clickedProfile, "<====clicked pro")
         try {
             const { data } = await axiosRes.post('/followers/', {
                 followed: clickedProfile.id,
@@ -46,7 +47,6 @@ export const ProfileDataProvider = ({ children }) => {
     const handleUnfollow = async (clickedProfile) => {
         try {
             await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
-    
           setProfileData((prevState) => ({
             ...prevState,
             pageProfile: {

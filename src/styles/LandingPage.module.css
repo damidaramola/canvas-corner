@@ -4,7 +4,7 @@
   }
   
   .LandingPageImage {
-    width: 370px;
+    width: 400px;
     margin: 0 auto;
     height: 100%;
   }
@@ -22,6 +22,10 @@
     .LandingPageImage {
       width: 80%;
       height: 80%;
+    }
+
+    h1{
+      font-size: 20px;
     }
   }
   
