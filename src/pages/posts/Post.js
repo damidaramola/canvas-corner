@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from '../../styles/Post.module.css'
+import React, { useState } from 'react';
+import styles from '../../styles/Post.module.css';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Badge, Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import Avatar from '../../components/Avatar';
 import { axiosRes } from '../../api/axiosDefaults';
 import { MenuDropdown } from '../../components/MenuDropdown';
-
+import Alerts from '../../components/Alerts';
 
 const Post = (props) => {
     const {
@@ -29,6 +29,8 @@ const Post = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+    const [showAlert, setShowAlert] = useState(false);
+
     const history = useHistory();
 
     // holds id of post user wants to edit
@@ -40,7 +42,10 @@ const Post = (props) => {
     const handleDelete = async () => {
         try {
             await axiosRes.delete(`/posts/${id}/`);
-            history.goBack();
+            setShowAlert(true);
+            setTimeout(function () {
+                history.push("/");
+            }, 1500);
         } catch (err) {
             console.log(err);
         }
@@ -49,7 +54,7 @@ const Post = (props) => {
     // allows users to like posts
     const handleLike = async () => {
         try {
-            const { data } = await axiosRes.post('/likes/', { post: id })
+            const { data } = await axiosRes.post('/likes/', { post: id });
             setPosts((prevPosts) => ({
                 ...prevPosts,
                 results: prevPosts.results.map((post) => {
@@ -83,7 +88,7 @@ const Post = (props) => {
     // allows users to bookmark posts
     const handleBookmark = async () => {
         try {
-            const { data } = await axiosRes.post('/bookmarks/', { post: id })
+            const { data } = await axiosRes.post('/bookmarks/', { post: id });
             setPosts((prevPosts) => ({
                 ...prevPosts,
                 results: prevPosts.results.map((post) => {
@@ -100,7 +105,7 @@ const Post = (props) => {
     // allows users to remove bookmark
     const handleRemoveBookmark = async () => {
         try {
-            await axiosRes.delete(`/bookmarks/${bookmark_id}`, { post: id })
+            await axiosRes.delete(`/bookmarks/${bookmark_id}`, { post: id });
             setPosts((prevPosts) => ({
                 ...prevPosts,
                 results: prevPosts.results.map((post) => {
@@ -117,6 +122,9 @@ const Post = (props) => {
 
     return (
         <Card className={styles.Post}>
+            {showAlert && (
+                <Alerts variant="info" message="This post has been deleted" />
+            )}
             <Card.Body>
                 <Media className='align-items-center justify-content-between'>
                     <Link to={`/profiles/${profile_id}`}>
@@ -216,6 +224,6 @@ const Post = (props) => {
             </Card.Body>
         </Card>
     );
-}
+};
 
-export default Post
+export default Post;
