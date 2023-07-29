@@ -25,6 +25,8 @@
 
   .Bookmark {
     color: var(--black);
+    margin-left: 250px;
+    position: absolute;
   }
   
   .Bookmark:hover {
@@ -37,7 +39,10 @@
 
   /* badge styling for skill level */
   .PostBadge{
+    background-color:var(--darker-blue);
+    color: rgb(15, 15, 15);
     padding: 5px 8px;
     margin: 0 4px;
+    border-radius: 30px;
    font-size: inherit;
   }

@@ -200,7 +200,7 @@ const Post = (props) => {
                             placement="top"
                             overlay={<Tooltip>You can't bookmark your own post!</Tooltip>}
                         >
-                            <i className="fa-regular fa-bookmark" />
+                            <i className={`fa-regular fa-bookmark ${styles.Bookmark}`} />
                         </OverlayTrigger>
                     ) : bookmark_id ? (
                         <span onClick={handleRemoveBookmark}>
@@ -209,7 +209,7 @@ const Post = (props) => {
                     ) :
                         currentUser ? (
                             <span onClick={handleBookmark}>
-                                <i className={`fa-regular fa-bookmark ${styles.BookmarkOutline}`} />
+                                <i className={`fa-regular fa-bookmark ${styles.Bookmark} ${styles.BookmarkOutline}`} />
                             </span>
                         ) :
                             (
@@ -217,7 +217,7 @@ const Post = (props) => {
                                     placement="top"
                                     overlay={<Tooltip>Log in to bookmark posts!</Tooltip>}
                                 >
-                                    <i className="fa-regular fa-bookmark" />
+                                    <i className={`fa-regular fa-bookmark ${styles.Bookmark}`} />
                                 </OverlayTrigger>
                             )}
                 </div>
