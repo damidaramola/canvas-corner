@@ -73,7 +73,7 @@ function PostCreateForm() {
       history.push(`/posts/${data.id}`)
     } catch (err) {
       // alert('image size larger than 2mb')
-      console.log(err)
+      // console.log(err)
       if (errors.response?.status !== 401) {
         setErrors(err.response?.data)
         
