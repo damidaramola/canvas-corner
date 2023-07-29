@@ -100,7 +100,8 @@ const SignUpForm = () => {
                         <Button
                             className={`${btnStyles.Button} ${btnStyles.Wide} `}
                             type="submit">
-                            Sign In
+                            Sign Up
+        
                         </Button>
                         {errors.non_field_errors?.map((message, idx) => (
                             <Alert variant="warning" key={idx} className="mt-3">
@@ -112,7 +113,7 @@ const SignUpForm = () => {
                 </Container>
                 <Container className={`mt-3 ${appStyles.Description}`}>
                     <Link className={styles.Link} to="/signin">
-                        Already have an account? <span>Sign in</span> 
+                    <h5> Already have an account? <span>Sign in</span> </h5>
                     </Link>
                 </Container>
             </Col>
