@@ -29,7 +29,7 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 ## User Stories
 
 #### Navigation 
-- As a user I can view the landing page so that I can read what CanvasCorner is about
+- As a user I can view the landing page so that I can read what the app (CanvasCorner) is about
 - As a user I can view a navigation bar from every page so that I can navigate easily between pages
 - As a user, I want to be able to navigate to the home page to see a feed of the latest shared content.
 - As a logged out user I can see sign in and sign up options so that I can sign in/sign up.
@@ -70,11 +70,16 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 
 ##### Back to [top](#table-of-contents)
 
+## Testing
 
+### Manual testing of user stories
 
+- As a user I can view the landing page so that I can read what the app (CanvasCorner) is about
 
-
-
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Paragraph explaining website is present for user to understand context | Works as expected |
+ 
 
 
 
