@@ -22,7 +22,6 @@ export const ProfileDataProvider = ({ children }) => {
     // the user had followed (clicked)
 
     const handleFollow = async (clickedProfile) => {
-        console.log(clickedProfile, "<====clicked pro")
         try {
             const { data } = await axiosRes.post('/followers/', {
                 followed: clickedProfile.id,
@@ -37,6 +36,7 @@ export const ProfileDataProvider = ({ children }) => {
             }));
         } catch (err) {
             console.log(err)
+            console.log(err.response?.data)
         }
     };
 
