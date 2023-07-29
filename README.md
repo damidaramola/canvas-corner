@@ -53,7 +53,7 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 - As a logged in user I can create posts so that I can share my images with other artists.
 - As a logged in user I can like a post so that I can show my support for the posts that interest me
 - As a logged in user I can unlike a post so that I can change my mind if I no longer am interested in a post
-- As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them
+- As a user I can view all the posts by a specific user so that I can catch up on their latest posts
 
 
 ### Comments
@@ -74,17 +74,99 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 
 ### Manual testing of user stories
 
+
+### Navigation
 - As a user I can view the landing page so that I can read what the app (CanvasCorner) is about
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Paragraph explaining website is present for user to understand context | Works as expected |
+Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Paragraph explaining website is present for user to understand the purpose of CanvasCorner | Works as expected |
  
+- As a user I can view a navigation bar from every page so that I can navigate easily between pages
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| load any page on website | Navbar is displayed with various navigation links | Works as Expected
 
 
+- As a user, I want to be able to navigate to the home page to see a feed of the latest shared content.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| click 'home' on the navbar | posts with all content is displayed to user | Works as Expected
+
+- As a logged out user I can see sign in and sign up options so that I can sign in/sign up.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Navigate to Navbar |  Sign up and Sign in links are displayed in the browser| Works as Expected
+
+### Posts
+- As a logged in user I can view all the posts by a specific user so that I can catch up on their latest posts
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click on home page in NavBar, click on users profile image  |All of Users posts are displayed  | Works as expected
 
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
 
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
 
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  |  |
