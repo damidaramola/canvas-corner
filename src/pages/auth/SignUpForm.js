@@ -4,6 +4,7 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { Alert, Form, Button, Image, Col, Row, Container } from "react-bootstrap";
+import signInPageImage from "../../assets/sign-up-image.jpg";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
@@ -97,7 +98,7 @@ const SignUpForm = () => {
                             />
                         </Form.Group>
                         <Button
-                            className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+                            className={`${btnStyles.Button} ${btnStyles.Wide} `}
                             type="submit">
                             Sign In
                         </Button>
@@ -121,9 +122,7 @@ const SignUpForm = () => {
             >
                 <Image
                     className={`${appStyles.FillerImage}`}
-                    src={
-                        "#"
-                    }
+                    src={signInPageImage}
                 />
             </Col>
         </Row>

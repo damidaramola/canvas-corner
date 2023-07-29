@@ -3,11 +3,11 @@
   --white: #ffffff;
   --black: rgb(0, 0, 0);
   --light-blue: #caf0f8;
-  --darker-blue: rgb(102, 212, 240);
+  --darker-blue: rgb(18, 204, 250);
   --light-grey: rgb(214, 214, 214);
   --dark-grey: rgb(66, 66, 66);
 
---purple: rgb(167, 29, 167);
+--purple: rgb(128, 41, 128);
 }
 
 .App {

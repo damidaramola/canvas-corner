@@ -94,9 +94,9 @@ function SignInForm() {
                         ))}
 
                         <Button
-                            className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+                            className={`${btnStyles.Button} ${btnStyles.Wide} `}
                             type="submit"
-                            onMouseDown={(e) => e.preventDefault()}
+                           
                             >
                             Sign In
                         </Button>
@@ -106,14 +106,13 @@ function SignInForm() {
                             </Alert>
                         ))}
                     </Form>
-
-
                 </Container>
                 <Container className={`mt-3 ${appStyles.Description}`}>
                     <Link className={styles.Link} to="/signup">
-                        Don't have an account? <span>Sign up now!</span>
+                       <h5> Don't have an account? <span>Sign up now!</span> </h5>
                     </Link>
                 </Container>
+                
             </Col>
             <Col
                 md={6}
