@@ -5,12 +5,13 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 
 ## Table of Contents
 - About 
-- Back-End API Link
+- Project Goals
 - User Stories 
 - Design of Website
  - colour scheme
  - WireFrames
 - Front-End
+- Back-End API Link
 - Features
 - Technologies I used 
  - Frameworks , Libraries and dependencies 
@@ -25,6 +26,22 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 - Bugs
 - Deployment
 - Credits
+
+## Project Goals
+The Goal for this content-sharing platform project is to allow users(artists) to engage with each other by liking, commenting , bookmarking and posting their art which they choose to share with their peers. This project is meant to be a hub for people with similar interests in art which keeps them inspired to create new work.
+
+Key functionalities :
+
+- User Navigation across each page
+- User authentication - sign up/sign in pages 
+- Interaction between users by adding posts, likes, comments and followers
+- Profiles where users can display their information and posts
+-CRUD functionality for comments, posts and likes
+- Bookmark filtering by saved posts
+- Responsiveness to allow users navigate website smoothly on multiple devices
+
+
+
 
 ## User Stories
 
