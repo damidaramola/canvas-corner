@@ -36,12 +36,31 @@ Key functionalities :
 - User authentication - sign up/sign in pages 
 - Interaction between users by adding posts, likes, comments and followers
 - Profiles where users can display their information and posts
--CRUD functionality for comments, posts and likes
+- CRUD functionality for comments, posts and likes
 - Bookmark filtering by saved posts
 - Responsiveness to allow users navigate website smoothly on multiple devices
 
 
 ## Design
+
+### Color Scheme
+ - The color scheme for this project was mostly different shades of blue to signify inspiration and a free open space for users to post their art pieces and add more color to the website themselves. There are also hints of dark purple and and white in places.
+
+![image](https://github.com/damidaramola/canvas-corner/assets/110638513/1d7e6e6e-bb8c-4e54-be8d-7c61ab282cb0)
+
+- Many of the buttons on each page are also blue.
+
+![image](https://github.com/damidaramola/canvas-corner/assets/110638513/7ae8bda4-bb04-4e37-87e3-1ed15e364900)
+
+
+## WireFrame
+
+- My wireframes were done during the planning process of my project and have change a lot since I started developing the website for time and change of design decisions.
+
+### landing page
+![landing page](https://github.com/damidaramola/canvas-corner/assets/110638513/c194816e-f605-43d8-9f17-0baa3d86be11)
+
+- The difference between my landing page wireframe and my actual landing page is the positioning of the text and images. I also have buttons which link to the sign up and sign in form.
 
 
 ## Libraries, frameworks and dependencies
@@ -358,6 +377,8 @@ Eslint validation for all .js pages
 - All .js page only have 1 Parsing error: 'import' and 'export' may appear only with 'sourceType: module'
 
 ## Chrome Dev Tools Lighthouse
+
+Lighthouse was used to test the  accessibility,performance, best practice and SEO of the website. The validation was done for both desktop & mobile.  
 
 
 # Bugs
