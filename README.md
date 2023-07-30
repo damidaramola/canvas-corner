@@ -87,20 +87,20 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| load any page on website | Navbar is displayed with various navigation links | Works as Expected
+| load any page on website | Navbar is displayed with various navigation links | Works as Expected                                                                                                                            
 
 
 - As a user, I want to be able to navigate to the home page to see a feed of the latest shared content
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| click 'home' on the navbar | posts with all content is displayed to user | Works as Expected
+| click 'home' on the navbar | posts with all content is displayed to user | Works as Expected                                                                                                                             
 
 - As a logged out user I can see sign in and sign up options so that I can sign in/sign up.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Navigate to Navbar |  Sign up and Sign in links are displayed in the browser| Works as Expected
+| Navigate to Navbar |  Sign up and Sign in links are displayed in the browser| Works as Expected                                                                                                          
 
 #### Authentication 
 
@@ -168,7 +168,7 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on home page in NavBar, click on users profile image  | All of Users posts are displayed  | Works as expected
+| Click on home page in NavBar, click on users profile image  | All of Users posts are displayed  | Works as expected                                       
 
 - As a logged in user I can create posts so that I can share my images with other artists.
 
@@ -180,13 +180,13 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on heart icon | heart icon should turn red and like count should increment by 1|Works as Expected
+| Click on heart icon | heart icon should turn red and like count should increment by 1|Works as Expected                                           
 
 - As a logged in user I can unlike a post so that I can change my mind if I no longer am interested in a post
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on red heart icon  |  heart icon should go from red to empty and like count should decrement by 1 |Works as Expected
+| Click on red heart icon  |  heart icon should go from red to empty and like count should decrement by 1 |Works as Expected                
 
 - As a logged in user I can bookmark a post so that I can save the posts that don't want to lose in my feed
 
@@ -212,14 +212,14 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on 'my comment field' , write a comment, then click post button| Comment should save under the post and can be viewed by other users |Works as Expected
+| Click on 'my comment field' , write a comment, then click post button| Comment should save under the post and can be viewed by other users |Works as Expected         
 
 
 - Delete comments: As an owner of a comment I can delete my comment so that I can control removal of my comment from the application
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on 3 dots on top of the comment then click the delete icon |The comment is removed with a feed back message upon deletion|Works as Expected
+| Click on 3 dots on top of the comment then click the delete icon |The comment is removed with a feed back message upon deletion|Works as Expected     
 
 - As an owner of a comment I can edit my comment so that I can fix or update my existing comment
 
@@ -233,17 +233,17 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Delete a post /comment | an alert will pop up telling the user their post comment has been deleted |Works as Expected
+| Delete a post /comment | an alert will pop up telling the user their post comment has been deleted |Works as Expected         
 
 - form validation: As a user I can be guided with secure form validation so that I can enter the correct inputs into my forms
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-|  Don't add an image when creating a post| Validation error will display and prompt user to add an image |Works as Expected
+|  Don't add an image when creating a post| Validation error will display and prompt user to add an image |Works as Expected       
 
 - As a site owner I can view responsive pages so that I can view the app on all screen sizes and benefit from a good user experience
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Change device screen size using chrome dev tools |  tools	The web functionality remains the same on various screen sizes |Works as Expected
+| Change device screen size using chrome dev tools |  tools	The web functionality remains the same on various screen sizes |Works as Expected                                   
 
