@@ -361,6 +361,30 @@ Eslint validation for all .js pages
 
 
 # Bugs
+| **Bug** | **Fix** |
+| ------- | ------- |
+|follow/unfollow button isn't working|Unsuccessful fix
+| no results found error on feed |Unsuccessful fix.It might be related to follower issue
 
+##### Back to [top](#table-of-contents)
 
 ## Deployment
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+   
+### Making a Local Clone
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click in it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open the command line interface on your computer
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard 
+  ```
+  $ git clone https://github.com/damidaramola/canvas-corner.git
+  ```
+7. Press Enter to create your local clone
+
+##### Back to [top](#table-of-contents)
