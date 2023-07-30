@@ -62,6 +62,45 @@ Key functionalities :
 
 - The difference between my landing page wireframe and my actual landing page is the positioning of the text and images. I also have buttons which link to the sign up and sign in form.
 
+### log in page
+
+![login page](https://github.com/damidaramola/canvas-corner/assets/110638513/83132225-abfb-4920-9011-52af7af485c9)
+
+- My actual log in page and wireframe log in page are ver similar. I have also added an image beside my sign-in form on the real page.
+
+### Display posts page
+
+![view posts page](https://github.com/damidaramola/canvas-corner/assets/110638513/83896400-3898-4114-8029-c118a4ac2e9f)
+
+- My display page in the wire frame has the skill level of each user on the side with the 3 different categories. I have opted to leave that out and have the category just on the post instead. The search bar is much smaller than I made it on the actual website.
+
+### Create post, Edit post
+
+![Create post page](https://github.com/damidaramola/canvas-corner/assets/110638513/e965f758-f68e-43f5-924a-53452baa42e3)
+
+![edit post page](https://github.com/damidaramola/canvas-corner/assets/110638513/4ecedde2-f50c-4f5c-b98e-8d8812f546b5)
+
+- Both the create and edit post pages do not deviate much from the final result.
+
+### Bookmarked posts
+
+![saved-bookmarked pages](https://github.com/damidaramola/canvas-corner/assets/110638513/96105ee9-37b9-4eed-b196-21b73d3356e8)
+
+- The bookmark icon can be seen in this wire frame and the wire frame has 'saved posts' written at the top for users who want to save/bookmark their posts and access them through the bookmarked page of posts.
+
+### Profile Page 
+
+![Pofile page](https://github.com/damidaramola/canvas-corner/assets/110638513/f02fd7ed-9cd9-4152-a069-ed7a755a1e98)
+
+- the profile page in the wire frame has a pagination of 3 posts per row which I did not implement in the final result. I have implemented an infinite scroll of the users posts instead.
+
+### Comments
+
+![comments](https://github.com/damidaramola/canvas-corner/assets/110638513/1f8ed4a8-7960-43f9-8e27-b4ec624f6101)
+
+- In the final comments page, the edit and delete icons are stored in a tooltip.
+
+
 
 ## Libraries, frameworks and dependencies
 
