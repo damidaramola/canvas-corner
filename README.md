@@ -1,4 +1,5 @@
 # CanvasCorner
+[link to project](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/)
 
 ![image](https://github.com/damidaramola/canvas-corner/assets/110638513/589fce36-9bb1-4f08-94b4-92a6704fda4f)
 
@@ -535,7 +536,7 @@ Inspiration for this code was taken from the [Moments](https://learn.codeinstitu
 
 ## Media
 
-Images were taken from [Pexels] (https://www.pexels.com/), [flatIcon.com](https://www.flaticon.com/search?type=icon&search-group=all&word=no+results&license=&color=&shape=&current_section=&author_id=&pack_id=&family_id=&style_id=&type=) and [Google Images](https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&rlz=1C1CHBF_enIE924IE924&oq=goo&gs_lcrp=EgZjaHJvbWUqFQgEEC4YQxiDARjHARixAxjRAxiKBTIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIJCAMQIxgnGIoFMhUIBBAuGEMYgwEYxwEYsQMY0QMYigUyBggFEEUYPDIGCAYQRRg8MgQIBxAF0gEIMjk0NGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)  
+Images were taken from [Pexels](https://www.pexels.com/) , [flatIcon.com](https://www.flaticon.com/search?type=icon&search-group=all&word=no+results&license=&color=&shape=&current_section=&author_id=&pack_id=&family_id=&style_id=&type=) and [Google Images](https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&rlz=1C1CHBF_enIE924IE924&oq=goo&gs_lcrp=EgZjaHJvbWUqFQgEEC4YQxiDARjHARixAxjRAxiKBTIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIJCAMQIxgnGIoFMhUIBBAuGEMYgwEYxwEYsQMY0QMYigUyBggFEEUYPDIGCAYQRRg8MgQIBxAF0gEIMjk0NGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)  
 
 
 
