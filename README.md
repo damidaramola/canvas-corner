@@ -1,5 +1,7 @@
 # CanvasCorner
 
+![image](https://github.com/damidaramola/canvas-corner/assets/110638513/589fce36-9bb1-4f08-94b4-92a6704fda4f)
+
 ## About Canvas Corner
 CanvasCorner is a photo-sharing content platform for artists who love to paint. They can share their artwork with many artists and gain inspiration for their future creations of art. As painting is a niche industry to be in, artists can build their network and gain strong connections which will help them to improve their art. This platform is for artists who are beginners, intermediate level or even paint at the professional level of an expert. It is a hub of inspiration for those who like to create with paint.
 
@@ -8,7 +10,7 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 - Project Goals
 - User Stories 
 - Design of Website
- - colour scheme
+ - color scheme
  - WireFrames
 - Front-End Components 
 - Back-End API Link
@@ -16,12 +18,10 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 - Technologies I used 
  - Frameworks , Libraries and dependencies 
  - Languages 
- - Tools
+
 - Future Features
 - Testing
  - Manual Testing of User Stories
- - Different devices 
- - Browser Compatibility
 - Validation
 - Bugs
 - Deployment
@@ -39,6 +39,52 @@ Key functionalities :
 - CRUD functionality for comments, posts and likes
 - Bookmark filtering by saved posts
 - Responsiveness to allow users navigate website smoothly on multiple devices
+
+## User Stories
+
+#### Navigation 
+- As a user I can view the landing page so that I can read what the app (CanvasCorner) is about
+- As a user I can view a navigation bar from every page so that I can navigate easily between pages
+- As a user, I want to be able to navigate to the home page to see a feed of the latest shared content.
+- As a logged out user I can see sign in and sign up options so that I can sign in/sign up.
+
+#### Authentication 
+- As a user, I want my access tokens to be automatically refreshed to maintain my logged-in status, ensuring a seamless user experience until I choose to log out.
+- As a user I can tell if I am logged in or not so that I can log in if I need to
+- As a user I can sign in to the app so that I can access functionality for logged in users
+- As a user I can create a new account/sign up so that I can access all the features for signed up/registered users
+
+### Profiles 
+- As a user I can view other users profiles so that I can see their posts and learn more about them
+- As a user, I want to be able to view user avatars, facilitating quick identification of other application users
+- As a user I can view statistics about a specific user: number of posts, follows and users followed so that I can learn more about them
+- As a logged in user I can follow and un-follow other profiles so that I can see and remove posts by specific users in my posts feed
+- As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
+
+
+### Posts
+- As a user I can view the details of a single post so that I can read more about it
+- As a logged in user I can create posts so that I can share my images with other artists.
+- As a logged in user I can like a post so that I can show my support for the posts that interest me
+- As a logged in user I can unlike a post so that I can change my mind if I no longer am interested in a post
+- As a logged in user I can bookmark a post so that I can save the posts that don't want to lose in my feed
+- As a logged in user I can un-bookmark a post so that I can change my mind if I no longer am interested in saving a post
+
+
+### Comments
+
+- As a user I can view the posts page so that I can read the comments about the post
+- As a logged in user I can add comments to a post so that I can share my thoughts and feelings about the post
+- Delete comments: As an owner of a comment I can delete my comment so that I can control removal of my comment from the application
+- As an owner of a comment I can edit my comment so that I can fix or update my existing comment
+
+#### General
+- As a user I can view feedback messages so that I know when I have successfully completed a task
+- form validation: As a user I can be guided with secure form validation so that I can enter the correct inputs into my forms
+- As a site owner I can view responsive pages so that I can view the app on all screen sizes and my users can benefit from a good user experience
+
+##### Back to [top](#table-of-contents)
+
 
 ## Design
 
@@ -89,7 +135,7 @@ Key functionalities :
 
 ### Profile Page 
 
-![Pofile page](https://github.com/damidaramola/canvas-corner/assets/110638513/f02fd7ed-9cd9-4152-a069-ed7a755a1e98)
+![Profile page](https://github.com/damidaramola/canvas-corner/assets/110638513/f02fd7ed-9cd9-4152-a069-ed7a755a1e98)
 
 - the profile page in the wire frame has a pagination of 3 posts per row which I did not implement in the final result. I have implemented an infinite scroll of the users posts instead.
 
@@ -143,7 +189,6 @@ Here are some of the features added in the website:
 - As a logged in user I can bookmark a post so that I can save the posts that don't want to lose in my feed
 
 
-
 ## Front-End Components
 
 I had 6 different reuseable components in my repository which include,
@@ -165,8 +210,7 @@ e.g.
 
 - `<Avatar />` - This component is used to render profile images in the UI. 
 
-
-### Django REST Framework
+### Back-End API link
 
 The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End project can be found [here](https://github.com/damidaramola/canvascorner-drf-api)
 
@@ -186,50 +230,6 @@ The API for this Front-End application was built with the Django REST Framework.
  - React 17.0.2
 
 
-## User Stories
-
-#### Navigation 
-- As a user I can view the landing page so that I can read what the app (CanvasCorner) is about
-- As a user I can view a navigation bar from every page so that I can navigate easily between pages
-- As a user, I want to be able to navigate to the home page to see a feed of the latest shared content.
-- As a logged out user I can see sign in and sign up options so that I can sign in/sign up.
-
-#### Authentication 
-- As a user, I want my access tokens to be automatically refreshed to maintain my logged-in status, ensuring a seamless user experience until I choose to log out.
-- As a user I can tell if I am logged in or not so that I can log in if I need to
-- As a user I can sign in to the app so that I can access functionality for logged in users
-- As a user I can create a new account/sign up so that I can access all the features for signed up/registered users
-
-### Profiles 
-- As a user I can view other users profiles so that I can see their posts and learn more about them
-- As a user, I want to be able to view user avatars, facilitating quick identification of other application users
-- As a user I can view statistics about a specific user: number of posts, follows and users followed so that I can learn more about them
-- As a logged in user I can follow and un-follow other profiles so that I can see and remove posts by specific users in my posts feed
-- As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
-
-
-### Posts
-- As a user I can view the details of a single post so that I can read more about it
-- As a logged in user I can create posts so that I can share my images with other artists.
-- As a logged in user I can like a post so that I can show my support for the posts that interest me
-- As a logged in user I can unlike a post so that I can change my mind if I no longer am interested in a post
-- As a logged in user I can bookmark a post so that I can save the posts that don't want to lose in my feed
-- As a logged in user I can un-bookmark a post so that I can change my mind if I no longer am interested in saving a post
-
-
-### Comments
-
-- As a user I can view the posts page so that I can read the comments about the post
-- As a logged in user I can add comments to a post so that I can share my thoughts and feelings about the post
-- Delete comments: As an owner of a comment I can delete my comment so that I can control removal of my comment from the application
-- As an owner of a comment I can edit my comment so that I can fix or update my existing comment
-
-#### General
-- As a user I can view feedback messages so that I know when I have successfully completed a task
-- form validation: As a user I can be guided with secure form validation so that I can enter the correct inputs into my forms
-- As a site owner I can view responsive pages so that I can view the app on all screen sizes and my users can benefit from a good user experience
-
-##### Back to [top](#table-of-contents)
 
 ## Testing
 
@@ -407,7 +407,7 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 ------------ | ------------ | ------------ |
 | Change device screen size using chrome dev tools |  tools	The web functionality remains the same on various screen sizes |Works as Expected                                   
 
-
+##### Back to [top](#table-of-contents)
 
 ## Validation
 
@@ -528,5 +528,17 @@ Lighthouse was used to test the  accessibility,performance, best practice and SE
   $ git clone https://github.com/damidaramola/canvas-corner.git
   ```
 7. Press Enter to create your local clone
+
+## Credits 
+
+Inspiration for this code was taken from the [Moments](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+RA101+2021_T3/courseware/70a8c55db0504bbdb5bcc3bfcf580080/953cd4e5015f483bb05263db3e740e19/) walkthrough. 
+
+## Media
+
+Images were taken from [Pexels] (https://www.pexels.com/), [flatIcon.com](https://www.flaticon.com/search?type=icon&search-group=all&word=no+results&license=&color=&shape=&current_section=&author_id=&pack_id=&family_id=&style_id=&type=) and [Google Images](https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&rlz=1C1CHBF_enIE924IE924&oq=goo&gs_lcrp=EgZjaHJvbWUqFQgEEC4YQxiDARjHARixAxjRAxiKBTIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIJCAMQIxgnGIoFMhUIBBAuGEMYgwEYxwEYsQMY0QMYigUyBggFEEUYPDIGCAYQRRg8MgQIBxAF0gEIMjk0NGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)  
+
+
+
+I would like to thank my Mentor and the Tutors who helped me when I experienced difficulties with my code
 
 ##### Back to [top](#table-of-contents)
