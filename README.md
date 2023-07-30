@@ -128,7 +128,7 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 ------------ | ------------ | ------------ |
 | Click 'Sign up' at the top right of Navbar or click the 'Join now!' button to be directed to sign up page then sign in | The user is directed to the sign up page once they click on the buttons mentioned in the previous block, then prompted to sign in |Works as Expected
 
-### Profiles 
+## Profiles 
 
 - As a user I can view other users profiles so that I can see their posts and learn more about them
 
@@ -162,7 +162,7 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 | Click 3 dots on the right hand corner of your profile page | A box will display options to change password/username which directs user to the correct form for each change |Works as Expected
 
 
-### Posts
+## Posts
 
 - As a logged in user I can view all the posts by a specific user so that I can catch up on their latest posts
 
@@ -200,7 +200,7 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 ------------ | ------------ | ------------ |
 |Click on solid black bookmark icon |Removes Bookmark and changes from solid black bookmark icon to empty bookmark icon , post is removed from the 'bookmarked' section in NavBar |Works as Expected
 
-### Comments
+## Comments
 
 - As a user I can view the posts page so that I can read the comments about the post
 
@@ -227,7 +227,7 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 ------------ | ------------ | ------------ |
 | Click on 3 dots on top of the comment then click the edit icon with pencil image | Comment can be edited where 'save' and 'cancel' buttons are present |Works as Expected
 
-#### General
+## General
 
 - As a user I can view feedback messages so that I know when I have successfully completed a task
 
@@ -247,28 +247,3 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 ------------ | ------------ | ------------ |
 | Change device screen size using chrome dev tools |  tools	The web functionality remains the same on various screen sizes |Works as Expected
 
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-|  |  |Works as Expected
-
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-|  |  |Works as Expected
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-|  |  |Works as Expected
-
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-|  |  |Works as Expected
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-|  |  |Works as Expected
-
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-|  |  |Works as Expected
