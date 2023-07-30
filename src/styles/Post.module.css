@@ -30,7 +30,7 @@
   }
   
   .Bookmark:hover {
-    color: var(-dark-grey);
+    color: var(--dark-grey);
   }
   
   .BookmarkOutline:hover {

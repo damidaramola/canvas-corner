@@ -41,7 +41,10 @@ Key functionalities :
 - Responsiveness to allow users navigate website smoothly on multiple devices
 
 
+## Design
 
+
+## Libraries, frameworks and dependencies
 
 ## User Stories
 
@@ -264,3 +267,100 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 ------------ | ------------ | ------------ |
 | Change device screen size using chrome dev tools |  tools	The web functionality remains the same on various screen sizes |Works as Expected                                   
 
+
+
+## Validation
+
+## CSS
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors. There are a few warnings: 'Due to their dynamic nature, CSS variables are currently not statically checked'
+
+App.module.css 
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+Asset.module.css 
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+Avatar.module.css 
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+Comment.module.css 
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+CommentCreateEditForm.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+DropdownMenu.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+Alerts.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+FollowButtons.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+Landing.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+SigninSignUpForm.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+DisplayPages.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+NavBar.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+Post.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+PostCreateEditForm.module.css
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+Profile.module.css
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+ProfilePage.module.css
+
+![validated css](https://github.com/damidaramola/canvas-corner/assets/110638513/09e77c68-3a32-428f-91aa-5b3bd9934565)
+
+## JSX Code Validation
+
+Eslint validation for components
+- All components only have 1 Parsing error: 'import' and 'export' may appear only with 'sourceType: module'
+e.g.
+
+![Alerts.js](https://github.com/damidaramola/canvas-corner/assets/110638513/d6b53a87-c20b-4345-82f5-31c2643efb1d)
+
+
+Eslint validation for contexts
+- All contexts only have 1 Parsing error: 'import' and 'export' may appear only with 'sourceType: module'
+e.g.
+![profileDatacontext](https://github.com/damidaramola/canvas-corner/assets/110638513/f9da30b4-7227-4ff3-a28d-fe0f80127801)
+
+
+Eslint validation for hooks
+- All hooks only have 1 Parsing error: 'import' and 'export' may appear only with 'sourceType: module'
+e.g.
+![useclickoutsidetoggle](https://github.com/damidaramola/canvas-corner/assets/110638513/10b2ba6b-c4a5-4516-b07c-03d59b10f768)
+
+
+Eslint validation for all .js pages
+- All .js page only have 1 Parsing error: 'import' and 'export' may appear only with 'sourceType: module'
+
+## Chrome Dev Tools Lighthouse
+
+
+# Bugs
+
+
+## Deployment
