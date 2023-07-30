@@ -10,7 +10,7 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 - Design of Website
  - colour scheme
  - WireFrames
-- Front-End
+- Front-End Components 
 - Back-End API Link
 - Features
 - Technologies I used 
@@ -39,7 +39,6 @@ Key functionalities :
 - CRUD functionality for comments, posts and likes
 - Bookmark filtering by saved posts
 - Responsiveness to allow users navigate website smoothly on multiple devices
-
 
 ## Design
 
@@ -100,9 +99,92 @@ Key functionalities :
 
 - In the final comments page, the edit and delete icons are stored in a tooltip.
 
+## Features
+
+Here are some of the features added in the website:
+
+### Landing page
+
+![landing home page](https://github.com/damidaramola/canvas-corner/assets/110638513/ed35cb18-73f2-4cb9-9bc8-3756cb692843)
+
+- As a user I can view the landing page so that I can read what the app (CanvasCorner) is about
+
+### Signup
+
+![Signup form](https://github.com/damidaramola/canvas-corner/assets/110638513/27ee7816-019b-40dc-bd93-cb6988d03e9c)
+
+- As a user I can create a new account/sign up so that I can access all the features for signed up/registered users
+
+### Signin
+
+![Sign in page](https://github.com/damidaramola/canvas-corner/assets/110638513/20021879-dbad-4c55-a826-b27500cc01a7)
+
+- As a user I can sign in to the app so that I can access functionality for logged in users
 
 
-## Libraries, frameworks and dependencies
+### profile page
+
+![profile page Dan](https://github.com/damidaramola/canvas-corner/assets/110638513/5131d755-b913-466c-8fb1-154e39dc61e2)
+
+- As a user, I have a personal profile page where other users can find me and my art
+
+
+### Edit Comments
+
+![edit post](https://github.com/damidaramola/canvas-corner/assets/110638513/5c12fe7b-ef69-4b47-92eb-92dff95b8382)
+
+- As an owner of a comment I can edit my comment so that I can fix or update my existing comment
+
+
+### bookmark
+
+![bookmark feature](https://github.com/damidaramola/canvas-corner/assets/110638513/b80de4a9-88af-431d-8941-62c4df1ecdb8)
+
+- As a logged in user I can bookmark a post so that I can save the posts that don't want to lose in my feed
+
+
+
+## Front-End Components
+
+I had 6 different reuseable components in my repository which include,
+
+![components](https://github.com/damidaramola/canvas-corner/assets/110638513/74d5b98e-9437-489f-b4a4-0962a0109078)
+
+-  `<Asset />` - This component displays different versions of the component based on the props to which is passed to it:
+e.g.
+  - image with src and alt attribute
+  - paragraph with a message
+- `<Alerts />` - This component displays feedback messages to the user upon performing a CRUD operation e.g. deleting comments.
+
+- `<NavBar />` - This component is reusable and displays the content depending on the login status of the user. For logged in user it shows icon link to the main posts page and 
+   user avatar/picture. For those who are not logged in, it displays icon links to sign up or log in instead of the avatar. 
+
+- `<PageNotFound />` - This component is for displaying a 404 graphic error message when the user enters a url which does not exist.
+
+- `<DropdownMenu />` - This component is used to render the dropdown menu which allows user to edit or delete their own posts or comments, and also change their profile password/username.
+
+- `<Avatar />` - This component is used to render profile images in the UI. 
+
+
+### Django REST Framework
+
+The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End project can be found [here](https://github.com/damidaramola/canvascorner-drf-api)
+
+
+## Technologies used :
+
+### Libraries, frameworks and dependencies
+- JSON Web Tokens (JWT) - This library was used to prevent unauthenticated users from making extra network requests in order to refresh their access tokens.
+- React-Bootstrap 4.6 - This library was used for its components , responsive design and styling
+- React Infinite Scroll - Ths=is was used to make the User experience smooth so they can scroll down the page without having to go to the next page or previous page with limited posts
+- Axios - Axios is a promise based HTTP and was used too send API requests from the react project to the API.
+
+### Languages
+- HTML
+- CSS
+- Javascript
+ - React 17.0.2
+
 
 ## User Stories
 
