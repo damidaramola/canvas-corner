@@ -19,7 +19,6 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 - Technologies I used 
  - Frameworks , Libraries and dependencies 
  - Languages 
-
 - Future Features
 - Testing
  - Manual Testing of User Stories
@@ -529,6 +528,73 @@ Lighthouse was used to test the  accessibility,performance, best practice and SE
   $ git clone https://github.com/damidaramola/canvas-corner.git
   ```
 7. Press Enter to create your local clone
+
+### How to deploy to heroku
+
+**In your application** 
+
+1. Add your list of requirements  through the terminal - "pip3 freeze --local > requirements.txt"
+2. Git add and git commit your changes 
+
+**Log in to heroku**
+
+3. Log in to [Heroku](https://dashboard.heroku.com/apps) or create a new account and log in
+
+4. Click "New" on the top right-hand corner and choose the option Create new app
+
+5. Write your app name - it must be unique
+
+6. Choose Region e.g Europe
+
+7. Click "Create App"
+
+**Once the page of your project opens.**
+
+8. Go to Resources Tab, Add-ons, search and add Heroku Postgres
+
+9. Choose "settings" from the menu on the top of the page
+
+10. Go to section "Config Vars" and click button "Reveal Config Vars". 
+
+11. Add the below variables to the list
+
+    * Database URL will be added automaticaly
+    * Secret_key - This is your djnago secret key (keep it safe!)
+    * Cloudinary URL can be obtained from [cloudinary](https://cloudinary.com/) follow the steps on the website to register. Follow the instructions on the website.
+
+**Go back to your code**
+
+12. A Procfile needs to be created in your app
+```
+web: gunicorn PROJECT_NAME.wsgi
+```
+
+13. In settings in your app add Heroku to ALLOWED_HOSTS
+
+14. Add and commit the changes in your code and push to github
+
+**Final step - deployment**
+
+15. Next go to "Deploy" in the menu bar on the top 
+
+16. Go to section "deployment method", choose "GitHub"
+
+17. New section will appear "Connect to GitHub" - Search for the repository to connect to
+
+18. type the name of your repository and click "search"
+
+19. once Heroku finds your repository - click "connect"
+
+20. Scroll down to the section "Automatic Deploys"
+
+21. Click "Enable automatic deploys" or choose "Deploy branch" and manually deploy
+
+22. Click "Deploy branch"
+
+Once the program runs:
+you should see the message "the app was sussesfully deployed"
+
+23. Click the button "View"
 
 ## Credits 
 
