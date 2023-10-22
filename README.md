@@ -505,7 +505,7 @@ Lighthouse was used to test the  accessibility,performance, best practice and SE
 # Bugs
 | **Bug** | **Fix** |
 | ------- | ------- |
-|follow/unfollow button isn't working|Unsuccessful fix
+|follow/un-follow button isn't working|Unsuccessful fix
 | no results found error on feed |Unsuccessful fix.It might be related to follower issue
 
 ##### Back to [top](#table-of-contents)
@@ -558,7 +558,7 @@ Lighthouse was used to test the  accessibility,performance, best practice and SE
 
 11. Add the below variables to the list
 
-    * Database URL will be added automaticaly
+    * Database URL will be added automatically
     * Secret_key - This is your djnago secret key (keep it safe!)
     * Cloudinary URL can be obtained from [cloudinary](https://cloudinary.com/) follow the steps on the website to register. Follow the instructions on the website.
 
@@ -592,7 +592,7 @@ web: gunicorn PROJECT_NAME.wsgi
 22. Click "Deploy branch"
 
 Once the program runs:
-you should see the message "the app was sussesfully deployed"
+you should see the message "the app was successfully deployed"
 
 23. Click the button "View"
 

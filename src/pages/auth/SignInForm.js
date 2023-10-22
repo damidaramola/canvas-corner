@@ -12,7 +12,7 @@ import signInPageImage from "../../assets/sign-up-image.jpg";
 
 function SignInForm() {
     const setCurrentUser = useSetCurrentUser();
-    useRedirect('loggedIn');
+    useRedirect("loggedIn");
 
     const [signInData, setSignInData] = useState({
         username: "",
@@ -35,7 +35,7 @@ function SignInForm() {
             const { data } = await axios.post("/dj-rest-auth/login/", signInData);
             setCurrentUser(data.user);
             setTokenTimestamp(data);
-            history.goBack();
+            history.push("/");
 
         } catch (err) {
             setErrors(err.response?.data);
