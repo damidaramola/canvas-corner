@@ -46,3 +46,11 @@
     border-radius: 30px;
    font-size: inherit;
   }
+
+  @media (max-width:445px){
+    .Bookmark {
+      color: var(--black);
+      margin-left: 95px;
+      position: absolute;
+    }
+  }
