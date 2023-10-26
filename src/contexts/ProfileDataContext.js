@@ -12,7 +12,7 @@ export const useSetProfileData = () => useContext(SetProfileDataContext);
 
 export const ProfileDataProvider = ({ children }) => {
     const [profileData, setProfileData] = useState({
-        pageProfile: { results: [] }
+        pageProfile: { results: [] },
     });
 
     const currentUser = useCurrentUser();
@@ -46,7 +46,8 @@ export const ProfileDataProvider = ({ children }) => {
 
     const handleUnfollow = async (clickedProfile) => {
         try {
-            await axiosRes.delete(`/followers/${clickedProfile.following_id}`);
+            await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
+            
           setProfileData((prevState) => ({
             ...prevState,
             pageProfile: {

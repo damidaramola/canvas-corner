@@ -23,9 +23,7 @@ function App() {
   const profile_id = currentUser?.profile_id || '';
 
 
-  // if(currentUser){
-  //   history.push('/')
-  // }
+
   return (
     <div className={styles.App}>
       <NavBar />

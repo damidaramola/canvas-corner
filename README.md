@@ -7,25 +7,24 @@
 CanvasCorner is a photo-sharing content platform for artists who love to paint. They can share their artwork with many artists and gain inspiration for their future creations of art. As painting is a niche industry to be in, artists can build their network and gain strong connections which will help them to improve their art. This platform is for artists who are beginners, intermediate level or even paint at the professional level of an expert. It is a hub of inspiration for those who like to create with paint.
 
 ## Table of Contents
-- About 
-- Project Goals
-- User Stories 
-- Design of Website
- - color scheme
- - WireFrames
-- Front-End Components 
-- Back-End API Link
-- Features
-- Technologies I used 
- - Frameworks , Libraries and dependencies 
- - Languages 
-- Future Features
-- Testing
- - Manual Testing of User Stories
-- Validation
-- Bugs
-- Deployment
-- Credits
+- [About](#about-canvas-corner)
+- [Project Goals](#project-goals)
+- [User Stories](#user-stories)
+- [Design of Website](#design)
+ - [color scheme](#color-scheme)
+ - [WireFrames](#wireframe)
+- [Front-End Components](#front-end-components) 
+- [Back-End API Link](#back-end-api-link)
+- [Features](#features)
+- [Technologies I used](#technologies-used) 
+ - [Frameworks , Libraries and dependencies](#libraries-frameworks-and-dependencies)
+ - [Languages](#languages) 
+- [Testing](#testing)
+ - [Manual Testing of User Stories](#manual-testing-of-user-stories)
+- [Validation](#validation)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
 ## Project Goals
 The Goal for this content-sharing platform project is to allow users(artists) to engage with each other by liking, commenting , bookmarking and posting their art which they choose to share with their peers. This project is meant to be a hub for people with similar interests in art which keeps them inspired to create new work.
@@ -89,7 +88,10 @@ Key functionalities :
 ## Design
 
 ### Color Scheme
- - The color scheme for this project was mostly different shades of blue to signify inspiration and a free open space for users to post their art pieces and add more color to the website themselves. There are also hints of dark purple and and white in places.
+ - The color scheme for this project was mostly different shades of blue to signify inspiration and a free open space for users to post their art pieces and add more color to the website themselves. There are also hints of dark purple which represents creativity as this is a platform for users to get creative with their art. 
+
+![image](https://github.com/damidaramola/canvas-corner/assets/110638513/50fef543-765b-4315-997d-9e24d4d6ee08)
+
 
 ![image](https://github.com/damidaramola/canvas-corner/assets/110638513/1d7e6e6e-bb8c-4e54-be8d-7c61ab282cb0)
 
@@ -506,7 +508,7 @@ Lighthouse was used to test the  accessibility,performance, best practice and SE
 | **Bug** | **Fix** |
 | ------- | ------- |
 |follow/un-follow button isn't working|Unsuccessful fix
-| no results found error on feed |Unsuccessful fix.It might be related to follower issue
+| no results found error on feed |Unsuccessful fix.(updated bug-fix attempt and evaluation of bug) -> there's an inconsistency  between the user pk and profile_id possibly because my superuser was created before the profile model, in which the pks didn't match up correctly with the profile id, This may be causing my follow button not to work. I could not debug this issue.
 
 ##### Back to [top](#table-of-contents)
 
