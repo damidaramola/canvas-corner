@@ -504,12 +504,6 @@ Eslint validation for all .js pages
 Lighthouse was used to test the  accessibility,performance, best practice and SEO of the website. The validation was done for both desktop & mobile.  
 
 
-# Bugs
-| **Bug** | **Fix** |
-| ------- | ------- |
-|follow/un-follow button isn't working|Unsuccessful fix
-| no results found error on feed |Unsuccessful fix.(updated bug-fix attempt and evaluation of bug) -> there's an inconsistency  between the user pk and profile_id possibly because my superuser was created before the profile model, in which the pks didn't match up correctly with the profile id, This may be causing my follow button not to work. I could not debug this issue.
-
 ##### Back to [top](#table-of-contents)
 
 ## Deployment
