@@ -592,9 +592,6 @@ you should see the message "the app was successfully deployed"
 
 23. Click the button "View"
 
-## Credits 
-
-Inspiration for this code was taken from the [Moments](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+RA101+2021_T3/courseware/70a8c55db0504bbdb5bcc3bfcf580080/953cd4e5015f483bb05263db3e740e19/) walkthrough. 
 
 ## Media
 
