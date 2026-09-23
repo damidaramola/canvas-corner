@@ -1,5 +1,3 @@
-# CanvasCorner
-[link to project](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/)
 
 ![image](https://github.com/damidaramola/canvas-corner/assets/110638513/589fce36-9bb1-4f08-94b4-92a6704fda4f)
 
@@ -29,7 +27,7 @@ CanvasCorner is a photo-sharing content platform for artists who love to paint. 
 ## Project Goals
 The Goal for this content-sharing platform project is to allow users(artists) to engage with each other by liking, commenting , bookmarking and posting their art which they choose to share with their peers. This project is meant to be a hub for people with similar interests in art which keeps them inspired to create new work.
 
-Key functionalities :
+Key functionalities:
 
 - User Navigation across each page
 - User authentication - sign up/sign in pages 
@@ -66,7 +64,7 @@ Key functionalities :
 - As a logged in user I can create posts so that I can share my images with other artists.
 - As a logged in user I can like a post so that I can show my support for the posts that interest me
 - As a logged in user I can unlike a post so that I can change my mind if I no longer am interested in a post
-- As a logged in user I can bookmark a post so that I can save the posts that don't want to lose in my feed
+- As a logged in user I can bookmark a post so that I can save the posts that I don't want to lose in my feed
 - As a logged in user I can un-bookmark a post so that I can change my mind if I no longer am interested in saving a post
 
 
@@ -102,7 +100,7 @@ Key functionalities :
 
 ## WireFrame
 
-- My wireframes were done during the planning process of my project and have change a lot since I started developing the website for time and change of design decisions.
+- My wireframes were done during the planning process of my project and have changed a lot since I started developing the website due to time and design decisions.
 
 ### landing page
 ![landing page](https://github.com/damidaramola/canvas-corner/assets/110638513/c194816e-f605-43d8-9f17-0baa3d86be11)
@@ -113,7 +111,7 @@ Key functionalities :
 
 ![login page](https://github.com/damidaramola/canvas-corner/assets/110638513/83132225-abfb-4920-9011-52af7af485c9)
 
-- My actual log in page and wireframe log in page are ver similar. I have also added an image beside my sign-in form on the real page.
+- My actual log in page and wireframe log in page are very similar. I have also added an image beside my sign-in form on the real page.
 
 ### Display posts page
 
@@ -188,7 +186,7 @@ Here are some of the features added in the website:
 
 ![bookmark feature](https://github.com/damidaramola/canvas-corner/assets/110638513/b80de4a9-88af-431d-8941-62c4df1ecdb8)
 
-- As a logged in user I can bookmark a post so that I can save the posts that don't want to lose in my feed
+- As a logged in user I can bookmark a post so that I can save the posts that I don't want to lose in my feed
 
 
 ## Front-End Components
@@ -197,7 +195,7 @@ I had 6 different reuseable components in my repository which include,
 
 ![components](https://github.com/damidaramola/canvas-corner/assets/110638513/74d5b98e-9437-489f-b4a4-0962a0109078)
 
--  `<Asset />` - This component displays different versions of the component based on the props to which is passed to it:
+-  `<Asset />` - This component displays different versions of the component based on the props passed to it:
 e.g.
   - image with src and alt attribute
   - paragraph with a message
@@ -217,13 +215,13 @@ e.g.
 The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End project can be found [here](https://github.com/damidaramola/canvascorner-drf-api)
 
 
-## Technologies used :
+## Technologies used:
 
 ### Libraries, frameworks and dependencies
 - JSON Web Tokens (JWT) - This library was used to prevent unauthenticated users from making extra network requests in order to refresh their access tokens.
 - React-Bootstrap 4.6 - This library was used for its components , responsive design and styling
-- React Infinite Scroll - Ths=is was used to make the User experience smooth so they can scroll down the page without having to go to the next page or previous page with limited posts
-- Axios - Axios is a promise based HTTP and was used too send API requests from the react project to the API.
+- React Infinite Scroll - This was used to make the User experience smooth so they can scroll down the page without having to go to the next page or previous page with limited posts
+- Axios - Axios is a promise-based HTTP client and was used to send API requests from the react project to the API.
 
 ### Languages
 - HTML
@@ -282,7 +280,7 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click 'Sign in' at the top right of Navbar or click 'Join now!'to be directed to sign in page then sign in | The user is directed to the sign in page once they click on the buttons mentioned in the previous block |Works as Expected
+| Click 'Sign in' at the top right of Navbar or click 'Join now!' to be directed to sign in page then sign in | The user is directed to the sign in page once they click on the buttons mentioned in the previous block |Works as Expected
 
 - As a user I can create a new account/sign up so that I can access all the features for signed up/registered users
 
@@ -350,7 +348,7 @@ Navigate to [this page](https://canvas-corner-b9b6c14b7bc7.herokuapp.com/) | Par
 ------------ | ------------ | ------------ |
 | Click on red heart icon  |  heart icon should go from red to empty and like count should decrement by 1 |Works as Expected                
 
-- As a logged in user I can bookmark a post so that I can save the posts that don't want to lose in my feed
+- As a logged in user I can bookmark a post so that I can save the posts that I don't want to lose in my feed
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -501,7 +499,7 @@ Eslint validation for all .js pages
 
 ## Chrome Dev Tools Lighthouse
 
-Lighthouse was used to test the  accessibility,performance, best practice and SEO of the website. The validation was done for both desktop & mobile.  
+Lighthouse was used to test the accessibility, performance, best practices and SEO of the website. The validation was done for both desktop & mobile.  
 
 
 # Bugs
@@ -561,7 +559,7 @@ Lighthouse was used to test the  accessibility,performance, best practice and SE
 11. Add the below variables to the list
 
     * Database URL will be added automatically
-    * Secret_key - This is your djnago secret key (keep it safe!)
+    * Secret_key - This is your Django secret key (keep it safe!)
     * Cloudinary URL can be obtained from [cloudinary](https://cloudinary.com/) follow the steps on the website to register. Follow the instructions on the website.
 
 **Go back to your code**
